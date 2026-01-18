@@ -120,6 +120,82 @@ const upload = multer({
 });
 ```
 
+## 🌐 Multi-Framework Support
+
+Native Multer now supports **Fastify**, **NestJS**, and **Bun** out of the box!
+
+### Fastify
+
+```javascript
+import Fastify from "fastify";
+import { createFastifyMulter } from "@purecore/native-multer";
+
+const fastify = Fastify();
+const upload = createFastifyMulter({ dest: "uploads/" });
+
+// Use as preHandler
+fastify.post(
+  "/upload",
+  {
+    preHandler: upload.single("file"),
+  },
+  async (request, reply) => {
+    return { file: request.file };
+  },
+);
+
+fastify.listen({ port: 3000 });
+```
+
+### NestJS
+
+```typescript
+import { Controller, Post, UseInterceptors } from "@nestjs/common";
+import { FileInterceptor, UploadedFile } from "@purecore/native-multer";
+
+@Controller("upload")
+export class UploadController {
+  @Post("single")
+  @UseInterceptors(FileInterceptor("file", { dest: "uploads/" }))
+  uploadFile(@UploadedFile() file: Express.Multer.File) {
+    return { file };
+  }
+}
+```
+
+### Bun (Elysia)
+
+```typescript
+import { Elysia } from "elysia";
+import { createBunMulter } from "@purecore/native-multer";
+
+const app = new Elysia();
+const upload = createBunMulter({ dest: "uploads/" });
+
+app.post("/upload", async ({ request }) => {
+  const result = await upload.single(request, "file");
+  return { file: result.file };
+});
+
+app.listen(3000);
+```
+
+### Framework Detection
+
+```javascript
+import {
+  createMulterForFramework,
+  detectFramework,
+} from "@purecore/native-multer";
+
+// Auto-detect framework
+const detection = detectFramework(req);
+console.log(detection.framework); // 'fastify', 'nestjs', 'bun', 'express'
+
+// Create for specific framework
+const upload = createMulterForFramework("fastify", { dest: "uploads/" });
+```
+
 ## 📚 API Reference
 
 ### Multer Methods

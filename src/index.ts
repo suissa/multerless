@@ -13,6 +13,42 @@ export {
 } from "./storage/index.js";
 export { default } from "./multer.js";
 
+// Factory and Framework Adapters
+export {
+  createMulterForFramework,
+  createMulterAuto,
+  detectFramework,
+  type SupportedFramework,
+  type FrameworkDetectionResult,
+} from "./factory.js";
+
+// Fastify Adapter
+export {
+  FastifyMulter,
+  fastifyMulter,
+  createFastifyMulter,
+} from "./adapters/fastify.js";
+
+// NestJS Adapter
+export {
+  NestMulterInterceptor,
+  FileInterceptor,
+  FilesInterceptor,
+  FileFieldsInterceptor,
+  AnyFilesInterceptor,
+  UploadedFile,
+  UploadedFiles,
+  createNestMulter,
+} from "./adapters/nestjs.js";
+
+// Bun Adapter
+export {
+  BunMulter,
+  elysiaMulter,
+  honoMulter,
+  createBunMulter,
+} from "./adapters/bun.js";
+
 // Re-export types for compatibility
 export type {
   Request,
