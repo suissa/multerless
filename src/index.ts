@@ -4,14 +4,30 @@
  * Drop-in replacement for Multer with superior performance and zero dependencies
  */
 
-export { MulterError } from "./errors.js";
-export {
+import multer from "./multer.js";
+import { MulterError } from "./errors.js";
+import {
   diskStorage,
   memoryStorage,
   s3Storage,
   gcsStorage,
 } from "./storage/index.js";
-export { default } from "./multer.js";
+
+// Attach static methods for compatibility
+// @ts-ignore
+multer.MulterError = MulterError;
+// @ts-ignore
+multer.diskStorage = diskStorage;
+// @ts-ignore
+multer.memoryStorage = memoryStorage;
+// @ts-ignore
+multer.s3Storage = s3Storage;
+// @ts-ignore
+multer.gcsStorage = gcsStorage;
+
+export { MulterError };
+export { diskStorage, memoryStorage, s3Storage, gcsStorage };
+export default multer;
 
 // Factory and Framework Adapters
 export {
