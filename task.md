@@ -16,4 +16,4 @@
 
 - [x] Criar relatório final em /reports
 
-- [ ] Fazer commit final documentando a implementação
+- [x] Fazer commit final documentando a implementação
