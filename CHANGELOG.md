@@ -1,5 +1,41 @@
 # CHANGELOG
 
+## [Release] v1.2.0 - 2026-01-19
+
+### What's Changed
+
+#### 📝 Documentação & Conscientização
+
+- **Artigo Técnico: Alarme sobre Multer** - Criado documento `ARTIGO_ALARME_MULTER.md`
+  - Exposição detalhada dos riscos do multer original (9.4M downloads/semana, 6 meses sem update)
+  - Análise crítica de 69 PRs pendentes e 178 issues abertas
+  - Documentação de vulnerabilidades de segurança conhecidas e não corrigidas
+  - Apresentação da filosofia do native-multer (0 dependências, versionamento canônico)
+  - Proposta de pipeline de automação inteligente para manutenção proativa
+  - Guia completo de migração do multer para native-multer
+  - Visão de futuro para ecossistema npm mais seguro e sustentável
+
+#### 🎯 Filosofia e Princípios
+
+- **Versionamento Canônico**: Estabelecido modelo de apenas 2 versões (1.0.0 e latest)
+- **Interface Imutável**: Garantia de nunca quebrar assinaturas, tipos ou contratos de I/O
+- **Zero Dependências**: Compromisso permanente de nunca adicionar dependências externas
+- **Manutenção Automatizada**: Definição de pipeline semanal de análise de PRs/issues
+
+### Técnica Utilizada
+
+Escrita técnica de artigo de conscientização usando:
+
+- Análise comparativa (multer vs native-multer)
+- Dados factuais de npm stats e repositório GitHub
+- Proposta de arquitetura de estabilidade em camadas
+- Definição de pipeline de automação com IA para classificação e correção
+- Estrutura persuasiva com foco em segurança e sustentabilidade
+
+### Objetivo
+
+Alertar a comunidade Node.js sobre os riscos de usar bibliotecas críticas sem manutenção ativa e posicionar o native-multer como solução estável, segura e sustentável a longo prazo.
+
 ## [Release] v1.1.1 - 2026-01-19
 
 ### What's Changed
