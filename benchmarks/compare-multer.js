@@ -17,7 +17,7 @@ const mockMulter = {
   memoryStorage: () => ({}),
 };
 
-// Import our native multer
+// Import our nexMulter
 import nativeMulter from "../dist/index.js";
 
 function benchmark(name, fn, iterations = 10000) {
@@ -48,7 +48,7 @@ const mockResults = benchmark("Mock Multer", () => {
   mockMulter.create({ dest: "./uploads" });
 });
 
-const nativeResults = benchmark("Native Multer", () => {
+const nativeResults = benchmark("nexMulter", () => {
   nativeMulter({ dest: "./uploads" });
 });
 
@@ -57,7 +57,7 @@ const improvement =
     mockResults.opsPerSecond) *
   100;
 console.log(
-  `\n🏆 Native Multer is ${improvement > 0 ? improvement.toFixed(1) : "comparable"}% ${improvement > 0 ? "faster" : "performance"}`,
+  `\n🏆 nexMulter is ${improvement > 0 ? improvement.toFixed(1) : "comparable"}% ${improvement > 0 ? "faster" : "performance"}`,
 );
 
 // Benchmark middleware creation

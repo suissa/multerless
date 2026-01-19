@@ -1,12 +1,11 @@
-# @purecore/nexmulter
-
+[![NexMulter](https://i.imgur.com/YMs9vz2.png)](https://i.imgur.com/YMs9vz2.png)
 [![npm version](https://badge.fury.io/js/%40purecore%2Fnexmulter.svg)](https://badge.fury.io/js/%40purecore%2Fnexmulter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/node/v/@purecore/nexmulter.svg)](https://nodejs.org/)
 
 **Native Node.js multipart/form-data parser - Drop-in replacement for Multer with superior performance and zero dependencies**
 
-## 🚀 Why Choose Native Multer?
+## 🚀 Why Choose nexMulter?
 
 - **🏆 100% Multer Compatible** - Drop-in replacement with identical API
 - **⚡ 30-50% Faster** - Native Node.js implementation without external dependencies
@@ -122,7 +121,7 @@ const upload = multer({
 
 ## 🌐 Multi-Framework Support
 
-Native Multer now supports **Fastify**, **NestJS**, and **Bun** out of the box!
+nexMulter now supports **Fastify**, **NestJS**, and **Bun** out of the box!
 
 ### Fastify
 
