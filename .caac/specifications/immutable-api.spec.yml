@@ -1,0 +1,13 @@
+spec:
+  name: ImmutableAPI
+  description: >
+    Public API, types and signatures must never change.
+
+  assert:
+    - condition: api_signature_changed
+      result: reject
+      reason: API mutability is forbidden.
+
+    - condition: type_definition_changed
+      result: reject
+      reason: Public types are immutable.

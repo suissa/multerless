@@ -1,0 +1,25 @@
+project:
+  name: nexmulter
+  class: critical
+  surface: multipart/form-data
+
+api:
+  mutability: forbidden
+  breaking_changes: never
+  versions:
+    allowed:
+      - "1.0.0"
+      - "latest"
+
+dependencies:
+  external: forbidden
+  transitive: forbidden
+
+io_contract:
+  signatures: immutable
+  types: immutable
+  runtime_behavior: backward-compatible
+
+governance:
+  backlog: forbidden
+  human_approval: forbidden

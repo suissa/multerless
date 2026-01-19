@@ -1,0 +1,27 @@
+on:
+  - pull_request
+  - issue
+  - discussion
+
+steps:
+  - classify:
+      categories:
+        - security
+        - performance
+        - api
+        - docs
+
+  - validate:
+      ruleset: .caac/ruleset.yml
+
+  - decide:
+      if:
+        - invariant_violation: reject
+        - security_fix: absorb
+        - performance_fix: absorb
+        - docs_only: accept
+      else: reject
+
+  - explain:
+      format: markdown
+      output: .caac/decisions/

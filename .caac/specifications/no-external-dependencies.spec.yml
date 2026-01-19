@@ -1,0 +1,9 @@
+spec:
+  name: NoExternalDependencies
+  description: >
+    The project must never introduce external or transitive dependencies.
+
+  assert:
+    - condition: dependency_added
+      result: reject
+      reason: External dependencies are forbidden.

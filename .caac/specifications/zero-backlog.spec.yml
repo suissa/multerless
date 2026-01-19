@@ -1,0 +1,11 @@
+spec:
+  name: ZeroBacklog
+  description: >
+    No contribution may remain undecided.
+
+  assert:
+    - condition: contribution_received
+      action:
+        - decide
+        - explain
+        - close

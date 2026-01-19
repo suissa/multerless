@@ -1,0 +1,12 @@
+rules:
+  - id: no_external_dependencies
+    spec: specifications/no-external-dependencies.spec.yml
+
+  - id: immutable_api
+    spec: specifications/immutable-api.spec.yml
+
+  - id: security_critical_surface
+    spec: specifications/security-critical-surface.spec.yml
+
+  - id: zero_backlog
+    spec: specifications/zero-backlog.spec.yml

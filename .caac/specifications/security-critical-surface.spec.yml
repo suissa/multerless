@@ -1,0 +1,14 @@
+spec:
+  name: SecurityCriticalSurface
+  description: >
+    multipart/form-data parsing is considered a hostile surface.
+
+  assert:
+    - condition: touches_parsing_logic
+      action:
+        - run_security_simulation
+        - require_internal_reimplementation
+
+    - condition: introduces_new_attack_surface
+      result: reject
+      reason: Security surface expansion is forbidden.

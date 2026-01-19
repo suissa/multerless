@@ -10,9 +10,9 @@
   - Exposição detalhada dos riscos do multer original (9.4M downloads/semana, 6 meses sem update)
   - Análise crítica de 69 PRs pendentes e 178 issues abertas
   - Documentação de vulnerabilidades de segurança conhecidas e não corrigidas
-  - Apresentação da filosofia do native-multer (0 dependências, versionamento canônico)
+  - Apresentação da filosofia do nexMulter (0 dependências, versionamento canônico)
   - Proposta de pipeline de automação inteligente para manutenção proativa
-  - Guia completo de migração do multer para native-multer
+  - Guia completo de migração do multer para nexMulter
   - Visão de futuro para ecossistema npm mais seguro e sustentável
 
 #### 🎯 Filosofia e Princípios
@@ -26,7 +26,7 @@
 
 Escrita técnica de artigo de conscientização usando:
 
-- Análise comparativa (multer vs native-multer)
+- Análise comparativa (multer vs nexMulter)
 - Dados factuais de npm stats e repositório GitHub
 - Proposta de arquitetura de estabilidade em camadas
 - Definição de pipeline de automação com IA para classificação e correção
@@ -34,7 +34,7 @@ Escrita técnica de artigo de conscientização usando:
 
 ### Objetivo
 
-Alertar a comunidade Node.js sobre os riscos de usar bibliotecas críticas sem manutenção ativa e posicionar o native-multer como solução estável, segura e sustentável a longo prazo.
+Alertar a comunidade Node.js sobre os riscos de usar bibliotecas críticas sem manutenção ativa e posicionar o nexMulter como solução estável, segura e sustentável a longo prazo.
 
 ## [Release] v1.1.1 - 2026-01-19
 

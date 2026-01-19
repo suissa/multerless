@@ -63,11 +63,11 @@ O multer é vítima de um problema sistêmico do ecossistema npm:
 4. **Vulnerabilidades se acumulam** silenciosamente
 5. **Quando algo grave acontece, já é tarde demais**
 
-## A Solução: Native-Multer
+## A Solução: nexMulter
 
 ### Uma Nova Filosofia de Desenvolvimento
 
-O `native-multer` não é apenas "mais uma alternativa ao multer". É uma **mudança de paradigma** em como bibliotecas críticas devem ser mantidas.
+O `nexMulter` não é apenas "mais uma alternativa ao multer". É uma **mudança de paradigma** em como bibliotecas críticas devem ser mantidas.
 
 ### 🎯 Pilares Fundamentais
 
@@ -105,7 +105,7 @@ A cada semana, um **pipeline automatizado**:
 
 1. **Analisa** uma quantidade definida de PRs e Issues do multer original
 2. **Avalia** a relevância e impacto de cada um
-3. **Implementa** correções necessárias no native-multer (se aplicável)
+3. **Implementa** correções necessárias no nexMulter (se aplicável)
 4. **Testa** automaticamente através de suites abrangentes
 5. **Publica** atualizações sem intervenção manual (se todos os testes passarem)
 
@@ -139,7 +139,7 @@ A cada semana, um **pipeline automatizado**:
 
 ## Substituição Trivial: Drop-in Replacement
 
-Migrar do multer para native-multer é **literal**:
+Migrar do multer para nexMulter é **literal**:
 
 ### Antes:
 
@@ -152,7 +152,7 @@ const upload = multer({ dest: "uploads/" });
 ### Depois:
 
 ```javascript
-import multer from "@purecore/native-multer";
+import multer from "@purecore/nexMulter";
 
 const upload = multer({ dest: "uploads/" });
 ```
@@ -172,7 +172,7 @@ O npm tem **milhares** de bibliotecas populares com os mesmos sintomas do multer
 
 ### A Solução Escalável
 
-O processo do native-multer pode (e deve) ser **replicado**:
+O processo do nexMulter pode (e deve) ser **replicado**:
 
 1. **Identificar biblioteca crítica** com manutenção problemática
 2. **Criar fork canônico** com interface imutável
@@ -227,9 +227,9 @@ O processo do native-multer pode (e deve) ser **replicado**:
 └──────────────────────────────────────────────┘
 ```
 
-## Comparação Direta: Multer vs Native-Multer
+## Comparação Direta: Multer vs nexMulter
 
-| Aspecto                    | Multer                      | Native-Multer             |
+| Aspecto                    | Multer                      | nexMulter                 |
 | -------------------------- | --------------------------- | ------------------------- |
 | **Dependências Externas**  | Sim (múltiplas)             | Zero                      |
 | **Última Atualização**     | 6+ meses atrás              | Semanal                   |
@@ -246,7 +246,7 @@ O processo do native-multer pode (e deve) ser **replicado**:
 
 ### Para Novos Projetos
 
-**Use native-multer desde o início.** Sem discussão.
+**Use nexMulter desde o início.** Sem discussão.
 
 ### Para Projetos Existentes
 
@@ -256,11 +256,11 @@ O processo do native-multer pode (e deve) ser **replicado**:
 # Remover multer
 npm uninstall multer
 
-# Instalar native-multer
-npm install @purecore/native-multer
+# Instalar nexMulter
+npm install @purecore/nexMulter
 
 # Ajustar imports
-# sed -i "s/from 'multer'/from '@purecore\/native-multer'/g" **/*.{js,ts}
+# sed -i "s/from 'multer'/from '@purecore\/nexMulter'/g" **/*.{js,ts}
 ```
 
 #### Fase 2: Validação (1 dia)
@@ -283,15 +283,15 @@ npm install @purecore/native-multer
 
 ## Extensibilidade Futura: Se Você Precisar de Mais
 
-O native-multer é **canônico** - nunca mudará. Mas e se você precisar de features novas?
+O nexMulter é **canônico** - nunca mudará. Mas e se você precisar de features novas?
 
 ### Abordagem Modular
 
 ```
-@purecore/native-multer          ← Canônico (1.0.0 forever)
-@purecore/native-multer-cloud    ← Extensão para storage cloud
-@purecore/native-multer-compress ← Extensão para compressão
-@purecore/native-multer-video    ← Extensão para processamento de vídeo
+@purecore/nexMulter          ← Canônico (1.0.0 forever)
+@purecore/nexMulter-cloud    ← Extensão para storage cloud
+@purecore/nexMulter-compress ← Extensão para compressão
+@purecore/nexMulter-video    ← Extensão para processamento de vídeo
 ```
 
 Cada extensão:
@@ -305,7 +305,7 @@ Cada extensão:
 ### Para Desenvolvedores
 
 1. **Audite suas dependências HOJE**
-2. **Migre para native-multer** em projetos ativos
+2. **Migre para nexMulter** em projetos ativos
 3. **Contribua** reportando bugs (que serão corrigidos!)
 4. **Espalhe** esta mensagem
 
@@ -327,7 +327,7 @@ Cada extensão:
 
 O multer serviu bem à comunidade por anos. Mas **sua era acabou**. Continuar usando uma biblioteca com 9.4 milhões de downloads semanais, 6 meses sem manutenção e vulnerabilidades conhecidas não é "pragmatismo" - é **negligência**.
 
-O native-multer não é apenas uma alternativa técnica. É uma **declaração de princípios**:
+O nexMulter não é apenas uma alternativa técnica. É uma **declaração de princípios**:
 
 > **Bibliotecas críticas merecem manutenção crítica.**
 
@@ -337,7 +337,7 @@ O native-multer não é apenas uma alternativa técnica. É uma **declaração d
 
 ### Próximos Passos Imediatos
 
-1. **Hoje**: Estrele o repositório → [github.com/suissa/native-multer](https://github.com/suissa/native-multer)
+1. **Hoje**: Estrele o repositório → [github.com/suissa/nexMulter](https://github.com/suissa/nexMulter)
 2. **Esta semana**: Teste em ambiente de desenvolvimento
 3. **Este mês**: Deploy em produção
 4. **Este ano**: Adote a filosofia em suas próprias bibliotecas
@@ -346,10 +346,10 @@ O native-multer não é apenas uma alternativa técnica. É uma **declaração d
 
 ## Recursos
 
-- **Repositório**: [github.com/suissa/native-multer](https://github.com/suissa/native-multer)
-- **NPM**: `npm install @purecore/native-multer`
-- **Documentação**: [docs.purecore.dev/native-multer](https://docs.purecore.dev/native-multer)
-- **Roadmap Público**: [github.com/suissa/native-multer/projects/1](https://github.com/suissa/native-multer/projects/1)
+- **Repositório**: [github.com/suissa/nexMulter](https://github.com/suissa/nexMulter)
+- **NPM**: `npm install @purecore/nexMulter`
+- **Documentação**: [docs.purecore.dev/nexMulter](https://docs.purecore.dev/nexMulter)
+- **Roadmap Público**: [github.com/suissa/nexMulter/projects/1](https://github.com/suissa/nexMulter/projects/1)
 - **Security Policy**: [SECURITY.md](./SECURITY.md)
 
 ---
@@ -368,7 +368,7 @@ Este projeto é parte da iniciativa **@purecore** - um conjunto de bibliotecas N
 
 - `@purecore/apify` - Roteamento HTTP (interface Express-like)
 - `@purecore/reqify` - Cliente HTTP (interface Axios-like)
-- `@purecore/native-multer` - Upload de arquivos (interface Multer-like)
+- `@purecore/nexMulter` - Upload de arquivos (interface Multer-like)
 
 ---
 
@@ -376,7 +376,7 @@ Este projeto é parte da iniciativa **@purecore** - um conjunto de bibliotecas N
 
 **Status do Multer original**: 6 meses sem atualização, 69 PRs pendentes, 178 issues abertas
 
-**Status do Native-Multer**: ✅ Ativamente mantido | ✅ 0 PRs pendentes | ✅ 0 vulnerabilidades conhecidas
+**Status do nexMulter**: ✅ Ativamente mantido | ✅ 0 PRs pendentes | ✅ 0 vulnerabilidades conhecidas
 
 ---
 
