@@ -1,5 +1,5 @@
 /**
- * @purecore/native-multer
+ * @purecore/nexmulter
  * Native Node.js multipart/form-data parser
  * Drop-in replacement for Multer with superior performance and zero dependencies
  */

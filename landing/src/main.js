@@ -78,12 +78,12 @@ app.innerHTML = `
           <div style="display: flex; align-items: center; gap: 1rem;">
             <div class="animate-float" style="font-size: 3rem;">📤</div>
             <div>
-              <h1 class="gradient-text" style="font-size: 1.5rem; font-weight: 700;">@purecore/native-multer</h1>
+              <h1 class="gradient-text" style="font-size: 1.5rem; font-weight: 700;">@purecore/nexmulter</h1>
               <p style="font-size: 0.875rem; color: rgb(148, 163, 184); margin-top: 0.25rem;">Zero Dependencies File Upload</p>
             </div>
           </div>
           <a 
-            href="https://github.com/purecore/native-multer" 
+            href="https://github.com/purecore/nexmulter" 
             target="_blank"
             style="padding: 0.75rem 1.5rem; background: linear-gradient(to right, rgb(124, 58, 237), rgb(192, 38, 211)); border-radius: 0.75rem; font-weight: 600; transition: all 0.3s; text-decoration: none; color: white;"
             onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 25px -5px rgba(139, 92, 246, 0.5)'"
@@ -112,7 +112,7 @@ app.innerHTML = `
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
               <span style="font-size: 0.875rem; font-weight: 600; color: rgb(148, 163, 184); text-transform: uppercase; letter-spacing: 0.05em;">Installation</span>
               <button 
-                onclick="navigator.clipboard.writeText('npm install @purecore/native-multer'); this.textContent='Copied!'; setTimeout(() => this.textContent='Copy', 2000)"
+                onclick="navigator.clipboard.writeText('npm install @purecore/nexmulter'); this.textContent='Copied!'; setTimeout(() => this.textContent='Copy', 2000)"
                 style="font-size: 0.75rem; padding: 0.25rem 0.75rem; background: rgb(30, 41, 59); border: none; border-radius: 0.5rem; cursor: pointer; color: white; transition: background 0.2s;"
                 onmouseover="this.style.background='rgb(51, 65, 85)'"
                 onmouseout="this.style.background='rgb(30, 41, 59)'"
@@ -120,7 +120,7 @@ app.innerHTML = `
                 Copy
               </button>
             </div>
-            <code style="color: rgb(167, 139, 250); font-family: 'Courier New', monospace; font-size: 1.125rem;">npm install @purecore/native-multer</code>
+            <code style="color: rgb(167, 139, 250); font-family: 'Courier New', monospace; font-size: 1.125rem;">npm install @purecore/nexmulter</code>
           </div>
         </div>
 
@@ -180,7 +180,7 @@ app.innerHTML = `
         <div style="max-width: 48rem; margin: 0 auto;">
           <div class="stat-card">
             <div style="position: relative; z-index: 10;">
-              <pre style="text-align: left; overflow-x: auto; font-size: clamp(0.75rem, 2vw, 1rem);"><code><span style="color: rgb(167, 139, 250);">import</span> <span style="color: rgb(203, 213, 225);">multer</span> <span style="color: rgb(167, 139, 250);">from</span> <span style="color: rgb(52, 211, 153);">'@purecore/native-multer'</span>;
+              <pre style="text-align: left; overflow-x: auto; font-size: clamp(0.75rem, 2vw, 1rem);"><code><span style="color: rgb(167, 139, 250);">import</span> <span style="color: rgb(203, 213, 225);">multer</span> <span style="color: rgb(167, 139, 250);">from</span> <span style="color: rgb(52, 211, 153);">'@purecore/nexmulter'</span>;
 <span style="color: rgb(167, 139, 250);">import</span> <span style="color: rgb(203, 213, 225);">express</span> <span style="color: rgb(167, 139, 250);">from</span> <span style="color: rgb(52, 211, 153);">'express'</span>;
 
 <span style="color: rgb(167, 139, 250);">const</span> <span style="color: rgb(203, 213, 225);">app</span> = <span style="color: rgb(34, 211, 238);">express</span>();
@@ -202,8 +202,8 @@ app.<span style="color: rgb(34, 211, 238);">post</span>(<span style="color: rgb(
       <footer style="max-width: 80rem; margin: 0 auto; padding: 3rem 1.5rem; text-align: center;">
         <p style="color: rgb(148, 163, 184); margin-bottom: 1rem;">Built with ❤️ by the PureCore Team</p>
         <div style="display: flex; align-items: center; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-          <a href="https://github.com/purecore/native-multer" style="color: rgb(148, 163, 184); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='rgb(167, 139, 250)'" onmouseout="this.style.color='rgb(148, 163, 184)'">GitHub</a>
-          <a href="https://npmjs.com/package/@purecore/native-multer" style="color: rgb(148, 163, 184); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='rgb(167, 139, 250)'" onmouseout="this.style.color='rgb(148, 163, 184)'">npm</a>
+          <a href="https://github.com/purecore/nexmulter" style="color: rgb(148, 163, 184); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='rgb(167, 139, 250)'" onmouseout="this.style.color='rgb(148, 163, 184)'">GitHub</a>
+          <a href="https://npmjs.com/package/@purecore/nexmulter" style="color: rgb(148, 163, 184); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='rgb(167, 139, 250)'" onmouseout="this.style.color='rgb(148, 163, 184)'">npm</a>
           <a href="#" style="color: rgb(148, 163, 184); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='rgb(167, 139, 250)'" onmouseout="this.style.color='rgb(148, 163, 184)'">Documentation</a>
         </div>
       </footer>

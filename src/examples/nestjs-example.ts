@@ -1,5 +1,5 @@
 /**
- * Exemplo de uso do native-multer com NestJS
+ * Exemplo de uso do nexmulter com NestJS
  */
 
 import {

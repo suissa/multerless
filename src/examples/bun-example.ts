@@ -1,5 +1,5 @@
 /**
- * Exemplo de uso do native-multer com Bun (usando Elysia)
+ * Exemplo de uso do nexmulter com Bun (usando Elysia)
  */
 
 import { Elysia } from "elysia";

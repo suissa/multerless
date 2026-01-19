@@ -1,8 +1,8 @@
-# @purecore/native-multer
+# @purecore/nexmulter
 
-[![npm version](https://badge.fury.io/js/%40purecore%2Fnative-multer.svg)](https://badge.fury.io/js/%40purecore%2Fnative-multer)
+[![npm version](https://badge.fury.io/js/%40purecore%2Fnexmulter.svg)](https://badge.fury.io/js/%40purecore%2Fnexmulter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/@purecore/native-multer.svg)](https://nodejs.org/)
+[![Node.js Version](https://img.shields.io/node/v/@purecore/nexmulter.svg)](https://nodejs.org/)
 
 **Native Node.js multipart/form-data parser - Drop-in replacement for Multer with superior performance and zero dependencies**
 
@@ -17,12 +17,12 @@
 
 ## 📊 Performance Comparison
 
-| Metric           | Multer      | @purecore/native-multer | Improvement        |
-| ---------------- | ----------- | ----------------------- | ------------------ |
-| **Upload Speed** | 1.2s        | 0.8s                    | **33% faster**     |
-| **Memory Usage** | 250MB       | 180MB                   | **28% less**       |
-| **Bundle Size**  | ~50KB       | ~15KB                   | **70% smaller**    |
-| **Dependencies** | 5+ packages | **0 packages**          | **100% reduction** |
+| Metric           | Multer      | @purecore/nexmulter | Improvement        |
+| ---------------- | ----------- | ------------------- | ------------------ |
+| **Upload Speed** | 1.2s        | 0.8s                | **33% faster**     |
+| **Memory Usage** | 250MB       | 180MB               | **28% less**       |
+| **Bundle Size**  | ~50KB       | ~15KB               | **70% smaller**    |
+| **Dependencies** | 5+ packages | **0 packages**      | **100% reduction** |
 
 ## 📦 Installation
 
@@ -34,7 +34,7 @@
 
 ```javascript
 const express = require('express');
-const multer = require('@purecore/native-multer');
+const multer = require('@purecore/nexmulter');
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
@@ -128,7 +128,7 @@ Native Multer now supports **Fastify**, **NestJS**, and **Bun** out of the box!
 
 ```javascript
 import Fastify from "fastify";
-import { createFastifyMulter } from "@purecore/native-multer";
+import { createFastifyMulter } from "@purecore/nexmulter";
 
 const fastify = Fastify();
 const upload = createFastifyMulter({ dest: "uploads/" });
@@ -151,7 +151,7 @@ fastify.listen({ port: 3000 });
 
 ```typescript
 import { Controller, Post, UseInterceptors } from "@nestjs/common";
-import { FileInterceptor, UploadedFile } from "@purecore/native-multer";
+import { FileInterceptor, UploadedFile } from "@purecore/nexmulter";
 
 @Controller("upload")
 export class UploadController {
@@ -167,7 +167,7 @@ export class UploadController {
 
 ```typescript
 import { Elysia } from "elysia";
-import { createBunMulter } from "@purecore/native-multer";
+import { createBunMulter } from "@purecore/nexmulter";
 
 const app = new Elysia();
 const upload = createBunMulter({ dest: "uploads/" });
@@ -183,10 +183,7 @@ app.listen(3000);
 ### Framework Detection
 
 ```javascript
-import {
-  createMulterForFramework,
-  detectFramework,
-} from "@purecore/native-multer";
+import { createMulterForFramework, detectFramework } from "@purecore/nexmulter";
 
 // Auto-detect framework
 const detection = detectFramework(req);
@@ -294,8 +291,8 @@ npm run benchmark
 
 ### From Multer
 
-1. **Install**: `npm install @purecore/native-multer`
-2. **Replace import**: Change `require('multer')` to `require('@purecore/native-multer')`
+1. **Install**: `npm install @purecore/nexmulter`
+2. **Replace import**: Change `require('multer')` to `require('@purecore/nexmulter')`
 3. **Done!** - No other changes needed
 
 ### Breaking Changes
@@ -317,8 +314,8 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md).
 ### Development Setup
 
 ```bash
-git clone https://github.com/purecore/native-multer.git
-cd native-multer
+git clone https://github.com/purecore/nexmulter.git
+cd nexmulter
 npm install
 npm run dev
 ```
@@ -335,9 +332,9 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 📞 Support
 
-- 📖 [Documentation](https://github.com/purecore/native-multer/wiki)
-- 🐛 [Issue Tracker](https://github.com/purecore/native-multer/issues)
-- 💬 [Discussions](https://github.com/purecore/native-multer/discussions)
+- 📖 [Documentation](https://github.com/purecore/nexmulter/wiki)
+- 🐛 [Issue Tracker](https://github.com/purecore/nexmulter/issues)
+- 💬 [Discussions](https://github.com/purecore/nexmulter/discussions)
 
 ---
 

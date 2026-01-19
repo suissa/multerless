@@ -54,7 +54,7 @@ const upload = multer({
 // Routes
 app.get("/", (req, res) => {
   res.send(`
-    <h1>@purecore/native-multer Example</h1>
+    <h1>@purecore/nexmulter Example</h1>
     <h2>Single File Upload</h2>
     <form action="/upload/single" method="post" enctype="multipart/form-data">
       <input type="file" name="avatar" accept="image/*" required>

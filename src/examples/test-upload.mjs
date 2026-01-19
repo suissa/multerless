@@ -1,5 +1,5 @@
 /**
- * Automated test for native-multer upload functionality
+ * Automated test for nexmulter upload functionality
  */
 
 import { writeFile } from "fs/promises";
