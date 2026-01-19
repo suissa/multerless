@@ -22,6 +22,11 @@
 - Criação manual de arquivos Markdown separados para cada idioma (`README.lang.md`).
 - Adaptação técnica dos termos mantendo a precisão das instruções de instalação e uso da API.
 
+#### 🎨 Interface
+
+- Atualizado background do site para `#0d1117` (GitHub Dark Dimmed).
+- Adicionado logo oficial no header.
+
 ## [Release] v1.1.0 - 2026-01-18
 
 ### What's Changed

@@ -9,7 +9,7 @@
 
   body {
     font-family: "Inter", system-ui, sans-serif;
-    background: linear-gradient(to bottom right, #020617, #0f172a, #020617);
+    background: #0d1117;
     color: white;
     min-height: 100vh;
   }

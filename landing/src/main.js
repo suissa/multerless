@@ -76,9 +76,11 @@ app.innerHTML = `
       <header style="max-width: 80rem; margin: 0 auto; padding: 4rem 1.5rem 2rem;">
         <div class="animate-fade-in" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
           <div style="display: flex; align-items: center; gap: 1rem;">
-            <div class="animate-float" style="font-size: 3rem;">📤</div>
+            <div class="animate-float">
+              <img src="https://i.imgur.com/YMs9vz2.png" alt="NexMulter Logo" style="height: 4rem; width: auto; filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.3));" />
+            </div>
             <div>
-              <h1 class="gradient-text" style="font-size: 1.5rem; font-weight: 700;">@purecore/nexmulter</h1>
+              <h1 class="gradient-text" style="font-size: 1.5rem; font-weight: 700; display: none;">@purecore/nexmulter</h1>
               <p style="font-size: 0.875rem; color: rgb(148, 163, 184); margin-top: 0.25rem;">Zero Dependencies File Upload</p>
             </div>
           </div>
