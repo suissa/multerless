@@ -3,6 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/node/v/@purecore/nexmulter.svg)](https://nodejs.org/)
 
+[English](README.md) | [Português](README.pt.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Italiano](README.it.md) | [Русский](README.ru.md) | [中文 (简体)](README.zh-CN.md) | [中文 (繁體)](README.zh-TW.md) | [日本語](README.ja.md)
+
 **Native Node.js multipart/form-data parser - Drop-in replacement for Multer with superior performance and zero dependencies**
 
 ## 🚀 Why Choose nexMulter?

@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## [Release] v1.1.1 - 2026-01-19
+
+### What's Changed
+
+#### 📝 Documentação
+
+- **Internacionalização (i18n)** - README traduzido para 8 novos idiomas:
+  - Português (pt-BR)
+  - Français (fr)
+  - Deutsch (de)
+  - Italiano (it)
+  - Русский (ru)
+  - 中文 (简体) (zh-CN)
+  - 中文 (繁體) (zh-TW)
+  - 日本語 (ja)
+- Adicionada barra de navegação de idiomas no topo de todos os arquivos README.
+
+### Técnica Utilizada
+
+- Criação manual de arquivos Markdown separados para cada idioma (`README.lang.md`).
+- Adaptação técnica dos termos mantendo a precisão das instruções de instalação e uso da API.
+
 ## [Release] v1.1.0 - 2026-01-18
 
 ### What's Changed
