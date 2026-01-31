@@ -1,4 +1,4 @@
-[![NexMulter](https://i.imgur.com/4w12Her.png)](https://i.imgur.com/4w12Her.png)
+[![NexMulter](https://i.imgur.com/nE0RRoo.png)](https://i.imgur.com/nE0RRoo.png)
 [![npm version](https://badge.fury.io/js/%40purecore%2Fnexmulter.svg)](https://badge.fury.io/js/%40purecore%2Fnexmulter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/node/v/@purecore/nexmulter.svg)](https://nodejs.org/)
@@ -342,3 +342,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 **Made with ❤️ by the PureCore Team**
 
 _Empowering developers with native, high-performance Node.js solutions_
+
