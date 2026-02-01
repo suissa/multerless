@@ -51,11 +51,11 @@ export default function App() {
         <div className="animate-pulse-slow absolute -bottom-24 -left-24 w-96 h-96 bg-red-500/20 rounded-full blur-3xl opacity-20 delay-1000"></div>
       </div>
 
-      <article className="relative pt-16 pb-4 z-10 max-w-5xl mx-auto px-6 py-0">
+      <article className="relative py-16 z-10 max-w-5xl mx-auto px-6 py-0">
         <img src="/logo.png" alt="multerless" className="w-full max-w-lg mx-auto drop-shadow-2xl" style={{ filter: "drop-shadow(0 0 20px rgba(52, 211, 153, 0.2))" }} />
       </article>
       {/* Main Content */}
-      <article className="relative z-10 max-w-5xl mx-auto px-6 pt-0 pb-12">
+      <article className="relative z-10 max-w-5xl mx-auto px-6 pt-0 pb-16">
         {/* Alarm Header */}
         <header className="text-center py-16 md:py-0 animate-fade-in">
           {/* <div className="inline-flex items-center gap-2 bg-red-500/10 border-2 border-red-500/50 rounded-full px-6 py-2 mb-8 animate-float">
