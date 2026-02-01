@@ -1,6 +1,32 @@
 # CHANGELOG
 
+## [Release] v1.4.1 - 2026-02-01
+
+### What's Changed
+
+- [x] **Restauração da Estrutura CaC**:
+  - Movimentação dos arquivos de `src/cac/` de volta para a raiz `/cac/` a pedido do usuário.
+  - Correção dos arquivos em `/cac/` para utilizar extensões `.ts` em vez de `.js` nos imports internos.
+- [x] **Correção do `cac/executor.ts`**:
+  - Implementação de imports tipo *star* (`import * as ...`).
+  - Restauração de todos os validadores (`invariants`, `ruleset`, `dependencies`, `security`, `decisions`, `specs`).
+  - Correção da ordem de inicialização do contexto.
+- [x] **Gerenciamento de Arquivos**:
+  - O diretório anterior `cac` foi renomeado para `APAGAR_cac` para segurança.
+  - O diretório temporário `src/cac` foi removido.
+
+### Técnica Utilizada
+
+- **Reorganização de Diretórios**: Uso de comandos Linux via WSL para mover e limpar a estrutura de pastas.
+- **Star Imports**: Agrupamento de funções de validação em namespaces para facilitar a leitura e manutenção no executor.
+- **Caminhos Relativos**: Ajuste fino dos caminhos de importação (`../../src/types.ts`) para garantir resolução correta conforme a nova estrutura.
+
+### Objetivo
+
+Restaurar a flexibilidade e preferência do usuário quanto à localização dos arquivos de governança (CaC) e garantir que o executor de contratos funcione corretamente com o novo sistema de tipos nominais.
+
 ## [Release] v1.4.0 - 2026-02-01
+
 
 ### What's Changed
 
