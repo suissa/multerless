@@ -5,7 +5,9 @@
     "moduleResolution": "bundler",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -29,6 +31,13 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "test", "benchmarks", "src/examples"]
+  "include": ["src/**/*", "cac/**/*"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test",
+    "benchmarks",
+    "src/examples",
+    "APAGAR_cac"
+  ]
 }
