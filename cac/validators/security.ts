@@ -1,5 +1,5 @@
 // src/cac/validators/security.ts
-import type { Context } from "../types.js";
+import type { Context } from "../types.ts";
 
 export function validateSecurity(ctx: Context) {
   // Check if invariants.yml mentions security critical class

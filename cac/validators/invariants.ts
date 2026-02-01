@@ -1,5 +1,5 @@
 // cac/validators/invariants.ts
-import type { Context } from "../types.js";
+import type { Context } from "../types.ts";
 
 export function validateInvariants(ctx: Context) {
   const required = [

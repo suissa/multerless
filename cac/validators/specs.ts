@@ -1,5 +1,5 @@
 // cac/validators/specs.ts
-import type { Context } from "../types.js";
+import type { Context } from "../types.ts";
 
 export function validateSpecs(ctx: Context) {
   for (const spec of ctx.specs) {

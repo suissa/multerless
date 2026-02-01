@@ -1,5 +1,5 @@
 // src/cac/validators/decisions.ts
-import type { Context } from "../types.js";
+import type { Context } from "../types.ts";
 
 export function validateDecisions(ctx: Context) {
   // At least one ADR must exist

@@ -1,8 +1,8 @@
-// cac/evidence.ts
+// cac/validators/evidence.ts
 import fs from "node:fs";
 import path from "node:path";
 
-import { asTimestamp, asEvidenceReason, type Evidence } from "./types.js";
+import { asTimestamp, asEvidenceReason, type Evidence } from "../types.ts";
 
 export function emitEvidence(evidence: Partial<Evidence>) {
   const payload: Evidence = {

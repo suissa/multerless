@@ -1,7 +1,7 @@
 // src/cac/validators/dependencies.ts
 import fs from "node:fs";
 import path from "node:path";
-import type { Context } from "../types.js";
+import type { Context } from "../types.ts";
 
 export function validateDependencies(_ctx: Context) {
   const pkgPath = path.resolve(process.cwd(), "package.json");

@@ -1,4 +1,4 @@
-import type { Bytes, MimeType } from "../../types.js";
+import type { Bytes, MimeType } from "../../src/types.ts";
 
 export function validateUpload(file: {
   size: Bytes | number;

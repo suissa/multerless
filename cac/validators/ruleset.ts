@@ -1,5 +1,5 @@
 // cac/validators/ruleset.ts
-import type { Context } from "../types.js";
+import type { Context } from "../types.ts";
 
 export function validateRuleset(ctx: Context) {
   

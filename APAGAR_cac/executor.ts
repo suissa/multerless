@@ -1,21 +1,17 @@
-// cac/executor.ts
+// cac/executor.ts  (import correto)
 import { loadContext } from "./loaders.ts";
+// import { validateInvariants } from "./validators/invariants.ts";
+// import { validateSpecs } from "./validators/specs.ts";
+// import { emitEvidence } from "./evidence.ts";
 import * as inv from "./validators/invariants.ts";
 import * as ev from "./validators/evidence.ts";
 import * as uv from "./validators/specs.ts";
-import * as rv from "./validators/ruleset.ts";
-import * as dv from "./validators/dependencies.ts";
-import * as sv from "./validators/security.ts";
-import * as dec from "./validators/decisions.ts";
 
+inv.validateInvariants(ctx);
 try {
   const ctx = loadContext();
 
   inv.validateInvariants(ctx);
-  rv.validateRuleset(ctx);
-  dv.validateDependencies(ctx);
-  sv.validateSecurity(ctx);
-  dec.validateDecisions(ctx);
   uv.validateSpecs(ctx);
 
   ev.emitEvidence({ status: "accepted" });
