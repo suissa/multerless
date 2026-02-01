@@ -102,7 +102,7 @@ export const translations: Translations = {
     table_row_deps_multerless: "Zero",
     table_row_update: "Última Atualização",
     table_row_update_multer: "6+ meses",
-    table_row_update_multerless: "Semanal",
+    table_row_update_multerless: "Automático",
     table_row_prs: "PRs Pendentes",
     table_row_prs_multer: "69",
     table_row_prs_multerless: "0 (meta)",
@@ -142,7 +142,7 @@ export const translations: Translations = {
     cta_title_prefix: "O Tempo de Agir é",
     cta_title_suffix: "AGORA",
     cta_desc:
-      'Continuar usando uma biblioteca com 9.4 milhões de downloads semanais, 6 meses sem manutenção e vulnerabilidades conhecidas não é "pragmatismo" — é <strong class="text-red-500">negligência</strong>.',
+      'Continuar usando uma biblioteca com 9.4 milhões de downloads semanais, 6 meses sem manutenção e vulnerabilidades conhecidas não é "pragmatismo",  é <strong class="text-red-500">negligência</strong>!',
     checklist_1_title: "✅ Hoje",
     checklist_1_desc: "Estrele o repositório e teste em dev",
     checklist_2_title: "✅ Esta semana",
@@ -152,7 +152,7 @@ export const translations: Translations = {
     quote: '"A melhor hora para migrar era há 6 meses.<br/>A segunda melhor hora é agora."',
     footer_warning: "🚨 Não espere uma violação de segurança para agir.",
     footer_initiative:
-      'Parte da iniciativa <strong class="text-emerald-300">@purecore</strong> — Bibliotecas Node.js seguras e sustentáveis',
+      'Parte da iniciativa <strong class="text-emerald-300">@purecore</strong>,  Bibliotecas Node.js seguras e sustentáveis',
     footer_status:
       "Última atualização: 19 de Janeiro de 2026<br/>Status do Multer: 6 meses sem atualização • 69 PRs pendentes • 178 issues abertas<br/>Status do multerless: ✅ Ativamente mantido | ✅ 0 PRs pendentes | ✅ 0 vulnerabilidades",
   },
@@ -222,7 +222,7 @@ export const translations: Translations = {
     cta_title_prefix: "The Time to Act is",
     cta_title_suffix: "NOW",
     cta_desc:
-      'Continuing to use a library with 9.4 million weekly downloads, 6 months without maintenance, and known vulnerabilities is not "pragmatism" — it\'s <strong class="text-red-500">negligence</strong>.',
+      'Continuing to use a library with 9.4 million weekly downloads, 6 months without maintenance, and known vulnerabilities is not "pragmatism",  it\'s <strong class="text-red-500">negligence</strong>.',
     checklist_1_title: "✅ Today",
     checklist_1_desc: "Star the repository and test in dev",
     checklist_2_title: "✅ This Week",
@@ -232,7 +232,7 @@ export const translations: Translations = {
     quote: '"The best time to migrate was 6 months ago.<br/>The second best time is now."',
     footer_warning: "🚨 Don't wait for a security breach to act.",
     footer_initiative:
-      'Part of the <strong class="text-emerald-300">@purecore</strong> initiative — Secure and sustainable Node.js libraries',
+      'Part of the <strong class="text-emerald-300">@purecore</strong> initiative,  Secure and sustainable Node.js libraries',
     footer_status:
       "Last updated: January 19, 2026<br/>Multer Status: 6 months without update • 69 pending PRs • 178 open issues<br/>multerless Status: ✅ Actively maintained | ✅ 0 pending PRs | ✅ 0 vulnerabilities",
   },

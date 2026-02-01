@@ -187,7 +187,7 @@ O processo do multerless pode (e deve) ser **replicado**:
 
 ```
 ┌──────────────────────────────────────────────┐
-│  Monitor Semanal (Issues + PRs originais)    │
+│  Monitor de Pull Requests                    │
 └──────────────┬───────────────────────────────┘
                ▼
 ┌──────────────────────────────────────────────┐

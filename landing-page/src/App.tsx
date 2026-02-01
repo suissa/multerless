@@ -51,23 +51,26 @@ export default function App() {
         <div className="animate-pulse-slow absolute -bottom-24 -left-24 w-96 h-96 bg-red-500/20 rounded-full blur-3xl opacity-20 delay-1000"></div>
       </div>
 
+      <article className="relative pt-8 z-10 max-w-5xl mx-auto px-6 py-0">
+        <img src="/logo.png" alt="multerless" className="w-full max-w-lg mx-auto drop-shadow-2xl" style={{ filter: "drop-shadow(0 0 20px rgba(52, 211, 153, 0.2))" }} />
+      </article>
       {/* Main Content */}
       <article className="relative z-10 max-w-5xl mx-auto px-6 py-12">
         {/* Alarm Header */}
-        <header className="text-center py-16 md:py-24 animate-fade-in">
-          <div className="inline-flex items-center gap-2 bg-red-500/10 border-2 border-red-500/50 rounded-full px-6 py-2 mb-8 animate-float">
+        <header className="text-center py-16 md:py-0 animate-fade-in">
+          {/* <div className="inline-flex items-center gap-2 bg-red-500/10 border-2 border-red-500/50 rounded-full px-6 py-2 mb-8 animate-float">
             <AlertCircle className="w-6 h-6 text-red-400" />
             <span className="text-red-300 font-bold uppercase tracking-widest text-sm">
               {t.alert_title}
             </span>
-          </div>
+          </div> */}
 
           <h1 className="text-5xl md:text-7xl font-black leading-tight mb-8 tracking-tight">
             {t.hero_title_prefix}{" "}
             <span className="bg-linear-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
               Multer
             </span>{" "}
-            {t.hero_title_suffix}
+            <span className="text-slate-300">{t.hero_title_suffix}</span>
             <br />
             <span className="text-slate-300">{t.hero_subtitle_1}</span>{" "}
             <span className="bg-linear-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
@@ -206,7 +209,7 @@ export default function App() {
         <section className="my-24">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-4">
-              {t.solution_title}{" "}
+              <span className="text-slate-300">{t.solution_title}</span>{" "}
               <span className="bg-linear-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
                 multerless
               </span>
@@ -323,7 +326,7 @@ export default function App() {
           <div className="bg-linear-to-br from-red-500/10 to-emerald-500/10 border-2 border-emerald-500/20 rounded-3xl p-12 md:p-16 relative overflow-hidden">
             <div className="relative z-10">
               <h2 className="text-5xl md:text-6xl font-black mb-8 leading-tight">
-                {t.cta_title_prefix}{" "}
+                <span className="text-slate-300">{t.cta_title_prefix}</span>{" "}
                 <span className="bg-linear-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
                   {t.cta_title_suffix}
                 </span>
@@ -371,7 +374,7 @@ export default function App() {
         </section>
 
         {/* Quote */}
-        <section className="my-24 text-center max-w-4xl mx-auto">
+        <section className="mt-0 text-center max-w-4xl mx-auto">
           <blockquote
             className="text-2xl md:text-3xl italic text-slate-300 border-l-8 border-emerald-500 pl-8 py-2 mb-8"
             dangerouslySetInnerHTML={{ __html: t.quote }}
@@ -382,10 +385,10 @@ export default function App() {
         </section>
 
         {/* Footer */}
-        <footer className="mt-32 pt-12 border-t border-slate-700/30 text-center">
+        <footer className="mt-0 pt-4 border-t border-slate-700/30 text-center">
           <div className="mb-8">
             <img
-              src="https://i.imgur.com/4w12Her.png"
+              src="/logos.png"
               alt="multerless"
               className="w-full max-w-lg mx-auto drop-shadow-2xl"
               style={{ filter: "drop-shadow(0 0 20px rgba(52, 211, 153, 0.2))" }}

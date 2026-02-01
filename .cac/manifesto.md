@@ -1,4 +1,4 @@
-# Collaboration as Code (cac) — multerless
+# Collaboration as Code (cac),  multerless
 
 This repository is governed by **Collaboration as Code**.
 
