@@ -2,7 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-import { asSpecContent, asSpecName, type Context } from "./types.ts";
+import { asSpecContent, asSpecName, type Context } from "./types.js";
 
 function read(file: string) {
   try {

@@ -1,12 +1,12 @@
 // src/cac/executor.ts (import correto)
-import { loadContext } from "./loaders.ts";
-import { validateInvariants } from "./validators/invariants.ts";
-import { validateSpecs } from "./validators/specs.ts";
-import { validateRuleset } from "./validators/ruleset.ts";
-import { validateDependencies } from "./validators/dependencies.ts";
-import { validateSecurity } from "./validators/security.ts";
-import { validateDecisions } from "./validators/decisions.ts";
-import { emitEvidence } from "./evidence.ts";
+import { loadContext } from "./loaders.js";
+import { validateInvariants } from "./validators/invariants.js";
+import { validateSpecs } from "./validators/specs.js";
+import { validateRuleset } from "./validators/ruleset.js";
+import { validateDependencies } from "./validators/dependencies.js";
+import { validateSecurity } from "./validators/security.js";
+import { validateDecisions } from "./validators/decisions.js";
+import { emitEvidence } from "./evidence.js";
 
 try {
   const ctx = loadContext();
