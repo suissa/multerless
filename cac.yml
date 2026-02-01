@@ -1,0 +1,13 @@
+kind: CollaborationAsCode
+version: 1.0
+
+repository:
+  governed: true
+  governanceModel: CaC
+
+principles:
+  - collaboration-is-engineering
+  - no-human-approvals
+  - deterministic-decisions
+  - evidence-first
+  - executor-is-blind

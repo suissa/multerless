@@ -1,0 +1,9 @@
+export function validateRuleset(ctx: any) {
+  if (!ctx.ruleset.includes("automatic")) {
+    throw new Error("Ruleset must enforce automatic evaluation");
+  }
+
+  if (ctx.ruleset.includes("manual")) {
+    throw new Error("Manual approval is forbidden by cac");
+  }
+}

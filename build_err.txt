@@ -1,0 +1,9 @@
+$ tsc
+src/storage/disk.ts(121,32): error TS2345: Argument of type '(error: Error | null, filename: FileName) => void' is not assignable to parameter of type '(error: Error | null, filename: string) => void'.
+  Types of parameters 'filename' and 'filename' are incompatible.
+    Type 'string' is not assignable to type 'FileName'.
+      Type 'string' is not assignable to type '{ readonly __brand: "FileName"; }'.
+src/storage/disk.ts(123,39): error TS2345: Argument of type '(error: Error | null, filename: FileName) => void' is not assignable to parameter of type '(error: Error | null, filename: string) => void'.
+  Types of parameters 'filename' and 'filename' are incompatible.
+    Type 'string' is not assignable to type 'FileName'.
+      Type 'string' is not assignable to type '{ readonly __brand: "FileName"; }'.

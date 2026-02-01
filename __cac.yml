@@ -1,0 +1,61 @@
+kind: CollaborationAsCode
+version: 1.0
+
+repository:
+  governed: true
+  governanceModel: CaC
+
+principles:
+  - collaboration-is-engineering
+  - no-human-approvals
+  - deterministic-decisions
+  - evidence-first
+  - executor-is-blind
+
+collaboration:
+  pullRequests:
+    required: true
+    decision: automatic
+    pending: forbidden
+
+  approvals:
+    human: forbidden
+    codeowners: ignored
+    comments: non-authoritative
+
+decisionModel:
+  authority:
+    source: rules-and-invariants
+    humanOverride: false
+
+  outcomes:
+    accepted:
+      mergeAllowed: true
+    rejected:
+      mergeAllowed: false
+      explanationRequired: true
+
+execution:
+  trigger:
+    - pull_request
+    - push
+    - schedule
+    - manual
+
+  executor:
+    type: blind
+    runtime: bun
+    language: typescript
+
+evidence:
+  required: true
+  format:
+    - json
+  persistence:
+    local: true
+    ciArtifacts: optional
+
+nonGoals:
+  - consensus
+  - discussion-based-approval
+  - manual-exceptions

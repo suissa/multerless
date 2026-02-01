@@ -1,0 +1,11 @@
+matrix:
+  frameworks:
+    - express
+    - fastify
+    - nestjs
+    - bun
+
+assert:
+  - identical_behavior
+  - identical_errors
+  - identical_request_contract

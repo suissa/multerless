@@ -1,0 +1,13 @@
+name: Collaboration as Code Submission
+description: All submissions are evaluated automatically
+body:
+  - type: markdown
+    value: |
+      This project is governed by Collaboration as Code.
+
+      Your submission will be:
+      - evaluated by specifications
+      - decided deterministically
+      - closed automatically
+
+      Human review is not part of the process.

@@ -1,0 +1,16 @@
+schedule: weekly
+
+steps:
+  - scan_ecosystem:
+      sources:
+        - multer
+        - busboy
+        - formidable
+
+  - detect_vulnerabilities
+
+  - on_find:
+      action:
+        - internal_reimplementation
+        - add_regression_test
+        - record_decision

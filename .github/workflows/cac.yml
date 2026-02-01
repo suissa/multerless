@@ -1,0 +1,16 @@
+# .github/workflows/cac.yml
+name: Collaboration as Code
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+
+jobs:
+  cac:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun src/cac/executor.ts

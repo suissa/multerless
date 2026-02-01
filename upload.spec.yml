@@ -1,0 +1,7 @@
+Decision:
+  name: upload-file
+  constraints:
+    maxSizeBytes: 1048576 # 1MB
+    allowedTypes:
+      - image/png
+      - image/jpeg
