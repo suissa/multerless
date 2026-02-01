@@ -55,7 +55,7 @@ export default function App() {
         <img src="/logo.png" alt="multerless" className="w-full max-w-lg mx-auto drop-shadow-2xl" style={{ filter: "drop-shadow(0 0 20px rgba(52, 211, 153, 0.2))" }} />
       </article>
       {/* Main Content */}
-      <article className="relative z-10 max-w-5xl mx-auto px-6 py-12">
+      <article className="relative z-10 max-w-5xl mx-auto px-6 pt-0 pb-12">
         {/* Alarm Header */}
         <header className="text-center py-16 md:py-0 animate-fade-in">
           {/* <div className="inline-flex items-center gap-2 bg-red-500/10 border-2 border-red-500/50 rounded-full px-6 py-2 mb-8 animate-float">
