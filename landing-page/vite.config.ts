@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
-    port: 8001,
+    port: 8321,
     watch: {
       usePolling: true,
       interval: 300,
@@ -16,9 +16,13 @@ export default defineConfig(({ mode }) => ({
     },
   },
   preview: {
-    host: "0.0.0.0",     // permite preview externo
-    port: 8001,
-    allowedHosts: ["multerless.purecore.codes"], // <-- linha que corrige o erro
+    host: "0.0.0.0",
+    port: 8321,
+    allowedHosts: [
+      "multerless.purecore.codes",
+      "multerless.purecore.codes:443",
+      "multerless.purecore.codes:8321",
+    ],
   },
   plugins: [
     react()],
