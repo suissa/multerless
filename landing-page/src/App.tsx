@@ -51,7 +51,7 @@ export default function App() {
         <div className="animate-pulse-slow absolute -bottom-24 -left-24 w-96 h-96 bg-red-500/20 rounded-full blur-3xl opacity-20 delay-1000"></div>
       </div>
 
-      <article className="relative pt-8 z-10 max-w-5xl mx-auto px-6 py-0">
+      <article className="relative pt-16 pb-4 z-10 max-w-5xl mx-auto px-6 py-0">
         <img src="/logo.png" alt="multerless" className="w-full max-w-lg mx-auto drop-shadow-2xl" style={{ filter: "drop-shadow(0 0 20px rgba(52, 211, 153, 0.2))" }} />
       </article>
       {/* Main Content */}
