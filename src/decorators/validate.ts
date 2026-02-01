@@ -1,5 +1,5 @@
 // src/decorators/validate.ts
-import { validateUpload } from "../cac/validators/upload.js";
+import { validateUpload } from "../../cac/validators/upload.ts";
 
 /**
  * Decorator to validate file upload invariants
