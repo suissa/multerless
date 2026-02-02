@@ -18,10 +18,12 @@ export default defineConfig(({ mode }) => ({
   preview: {
     host: "0.0.0.0",
     port: 8321,
+    strictPort: false,
     allowedHosts: [
       "multerless.purecore.codes",
       "multerless.purecore.codes:443",
       "multerless.purecore.codes:8321",
+      "::ffff:127.0.0.1", // IPv6 loopback para compatibilidade
     ],
   },
   plugins: [
