@@ -1,6 +1,6 @@
 {
-  "name": "nexmulter",
-  "version": "1.0.0",
+  "name": "multerless",
+  "version": "0.1.0",
   "description": "Native Node.js multipart/form-data parser - Drop-in replacement for Multer with superior performance and zero dependencies",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
