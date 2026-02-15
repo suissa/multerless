@@ -1,4 +1,4 @@
-# Collaboration as Code (CaaC) — nexmulter
+# Collaboration as Code (CaaC) — multerless
 
 This repository is governed by **Collaboration as Code**.
 

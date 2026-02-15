@@ -1,13 +1,13 @@
-[![NexMulter](https://i.imgur.com/YMs9vz2.png)](https://i.imgur.com/YMs9vz2.png)
-[![npm version](https://badge.fury.io/js/%40purecore%2Fnexmulter.svg)](https://badge.fury.io/js/%40purecore%2Fnexmulter)
+[![multerless](https://i.imgur.com/YMs9vz2.png)](https://i.imgur.com/YMs9vz2.png)
+[![npm version](https://badge.fury.io/js/%40purecore%2Fmulterless.svg)](https://badge.fury.io/js/%40purecore%2Fmulterless)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/@purecore/nexmulter.svg)](https://nodejs.org/)
+[![Node.js Version](https://img.shields.io/node/v/@purecore/multerless.svg)](https://nodejs.org/)
 
 [English](README.md) | [Português](README.pt.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Italiano](README.it.md) | [Русский](README.ru.md) | [中文 (简体)](README.zh-CN.md) | [中文 (繁體)](README.zh-TW.md) | [日本語](README.ja.md)
 
 **ネイティブNode.js multipart/form-data パーサー - Multerのドロップイン代替品 ("Drop-in replacement") で、優れたパフォーマンスと依存関係ゼロを実現**
 
-## 🚀 なぜ nexMulter を選ぶのか？
+## 🚀 なぜ multerless を選ぶのか？
 
 - **🏆 100% Multer互換** - APIが完全に同一のドロップイン代替品。
 - **⚡ 30-50% 高速** - 外部依存関係のないネイティブNode.js実装。
@@ -18,7 +18,7 @@
 
 ## 📊 パフォーマンス比較
 
-| 指標                 | Multer        | @purecore/nexmulter | 改善率        |
+| 指標                 | Multer        | @purecore/multerless | 改善率        |
 | -------------------- | ------------- | ------------------- | ------------- |
 | **アップロード速度** | 1.2s          | 0.8s                | **33% 高速**  |
 | **メモリ使用量**     | 250MB         | 180MB               | **28% 削減**  |
@@ -28,7 +28,7 @@
 ## 📦 インストール
 
 ```bash
-npm install @purecore/nexmulter
+npm install @purecore/multerless
 ```
 
 ## 🎯 クイックスタート
@@ -37,7 +37,7 @@ npm install @purecore/nexmulter
 
 ```javascript
 const express = require("express");
-const multer = require("@purecore/nexmulter");
+const multer = require("@purecore/multerless");
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
@@ -127,13 +127,13 @@ const upload = multer({
 
 ## 🌐 マルチフレームワーク対応
 
-nexMulterは、**Fastify**、**NestJS**、**Bun** をネイティブにサポートします！
+multerlessは、**Fastify**、**NestJS**、**Bun** をネイティブにサポートします！
 
 ### Fastify
 
 ```javascript
 import Fastify from "fastify";
-import { createFastifyMulter } from "@purecore/nexmulter";
+import { createFastifyMulter } from "@purecore/multerless";
 
 const fastify = Fastify();
 const upload = createFastifyMulter({ dest: "uploads/" });
@@ -156,7 +156,7 @@ fastify.listen({ port: 3000 });
 
 ```typescript
 import { Controller, Post, UseInterceptors } from "@nestjs/common";
-import { FileInterceptor, UploadedFile } from "@purecore/nexmulter";
+import { FileInterceptor, UploadedFile } from "@purecore/multerless";
 
 @Controller("upload")
 export class UploadController {
@@ -172,7 +172,7 @@ export class UploadController {
 
 ```typescript
 import { Elysia } from "elysia";
-import { createBunMulter } from "@purecore/nexmulter";
+import { createBunMulter } from "@purecore/multerless";
 
 const app = new Elysia();
 const upload = createBunMulter({ dest: "uploads/" });
@@ -188,7 +188,7 @@ app.listen(3000);
 ### フレームワーク検出
 
 ```javascript
-import { createMulterForFramework, detectFramework } from "@purecore/nexmulter";
+import { createMulterForFramework, detectFramework } from "@purecore/multerless";
 
 // フレームワーク自動検出
 const detection = detectFramework(req);
@@ -296,8 +296,8 @@ npm run benchmark
 
 ### Multer から
 
-1. **インストール**: `npm install @purecore/nexmulter`
-2. **インポート置換**: `require('multer')` を `require('@purecore/nexmulter')` に変更
+1. **インストール**: `npm install @purecore/multerless`
+2. **インポート置換**: `require('multer')` を `require('@purecore/multerless')` に変更
 3. **完了！** - 他の変更は必要ありません
 
 ### 破壊的変更 (Breaking Changes)
@@ -319,8 +319,8 @@ npm run benchmark
 ### 開発セットアップ
 
 ```bash
-git clone https://github.com/purecore/nexmulter.git
-cd nexmulter
+git clone https://github.com/purecore/multerless.git
+cd multerless
 npm install
 npm run dev
 ```
@@ -337,9 +337,9 @@ MITライセンス - 詳細は [LICENSE](LICENSE) ファイルをご覧くださ
 
 ## 📞 サポート
 
-- 📖 [ドキュメント](https://github.com/purecore/nexmulter/wiki)
-- 🐛 [課題トラッカー](https://github.com/purecore/nexmulter/issues)
-- 💬 [ディスカッション](https://github.com/purecore/nexmulter/discussions)
+- 📖 [ドキュメント](https://github.com/purecore/multerless/wiki)
+- 🐛 [課題トラッカー](https://github.com/purecore/multerless/issues)
+- 💬 [ディスカッション](https://github.com/purecore/multerless/discussions)
 
 ---
 

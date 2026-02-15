@@ -1,5 +1,5 @@
 /**
- * Benchmark comparing @purecore/nexmulter with original multer
+ * Benchmark comparing @purecore/multerless with original multer
  */
 
 import { performance } from "node:perf_hooks";
@@ -17,7 +17,7 @@ const mockMulter = {
   memoryStorage: () => ({}),
 };
 
-// Import our nexMulter
+// Import our multerless
 import nativeMulter from "../dist/index.js";
 
 function benchmark(name, fn, iterations = 10000) {
@@ -39,7 +39,7 @@ function benchmark(name, fn, iterations = 10000) {
   return { duration, opsPerSecond };
 }
 
-console.log("📊 @purecore/nexmulter vs Multer Benchmark");
+console.log("📊 @purecore/multerless vs Multer Benchmark");
 console.log("================================================");
 
 // Benchmark instance creation
@@ -48,7 +48,7 @@ const mockResults = benchmark("Mock Multer", () => {
   mockMulter.create({ dest: "./uploads" });
 });
 
-const nativeResults = benchmark("nexMulter", () => {
+const nativeResults = benchmark("multerless", () => {
   nativeMulter({ dest: "./uploads" });
 });
 
@@ -57,7 +57,7 @@ const improvement =
     mockResults.opsPerSecond) *
   100;
 console.log(
-  `\n🏆 nexMulter is ${improvement > 0 ? improvement.toFixed(1) : "comparable"}% ${improvement > 0 ? "faster" : "performance"}`,
+  `\n🏆 multerless is ${improvement > 0 ? improvement.toFixed(1) : "comparable"}% ${improvement > 0 ? "faster" : "performance"}`,
 );
 
 // Benchmark middleware creation

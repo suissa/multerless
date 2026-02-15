@@ -75,7 +75,7 @@ app.innerHTML = `
         <h2 style="font-size: 2rem; font-weight: 800; text-align: center; margin-bottom: 2rem;">
           <span style="background: linear-gradient(to right, rgb(239, 68, 68), rgb(220, 38, 38)); background-clip: text; -webkit-background-clip: text; color: transparent;">Multer</span>
           <span style="color: rgb(148, 163, 184); font-weight: 400; margin: 0 1rem;">vs</span>
-          <span style="background: linear-gradient(to right, rgb(52, 211, 153), rgb(16, 185, 129)); background-clip: text; -webkit-background-clip: text; color: transparent;">nexMulter</span>
+          <span style="background: linear-gradient(to right, rgb(52, 211, 153), rgb(16, 185, 129)); background-clip: text; -webkit-background-clip: text; color: transparent;">multerless</span>
         </h2>
         
         <div style="background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(24px); border: 1px solid rgba(71, 85, 105, 0.5); border-radius: 1rem; overflow: hidden;">
@@ -84,7 +84,7 @@ app.innerHTML = `
               <tr style="background: rgba(30, 41, 59, 0.8);">
                 <th style="padding: 1rem; text-align: left; color: rgb(203, 213, 225); font-weight: 600; border-bottom: 1px solid rgba(71, 85, 105, 0.5);">Aspecto</th>
                 <th style="padding: 1rem; text-align: center; color: rgb(252, 165, 165); font-weight: 600; border-bottom: 1px solid rgba(71, 85, 105, 0.5);">Multer</th>
-                <th style="padding: 1rem; text-align: center; color: rgb(110, 231, 183); font-weight: 600; border-bottom: 1px solid rgba(71, 85, 105, 0.5);">nexMulter</th>
+                <th style="padding: 1rem; text-align: center; color: rgb(110, 231, 183); font-weight: 600; border-bottom: 1px solid rgba(71, 85, 105, 0.5);">multerless</th>
               </tr>
             </thead>
             <tbody style="color: rgb(203, 213, 225);">
@@ -127,7 +127,7 @@ app.innerHTML = `
       <section style="margin: 4rem 0;">
         <div style="text-align: center; margin-bottom: 3rem;">
           <h2 style="font-size: 2.25rem; font-weight: 900; margin-bottom: 1rem;">
-            A Solução: <span style="background: linear-gradient(to right, rgb(52, 211, 153), rgb(16, 185, 129)); background-clip: text; -webkit-background-clip: text; color: transparent;">nexMulter</span>
+            A Solução: <span style="background: linear-gradient(to right, rgb(52, 211, 153), rgb(16, 185, 129)); background-clip: text; -webkit-background-clip: text; color: transparent;">multerless</span>
           </h2>
           <p style="font-size: 1.125rem; color: rgb(203, 213, 225);">Uma nova filosofia de desenvolvimento para bibliotecas críticas</p>
         </div>
@@ -197,9 +197,9 @@ app.innerHTML = `
           
           <div style="background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(24px); border: 1px solid rgba(52, 211, 153, 0.5); border-radius: 1rem; padding: 1.5rem;">
             <div style="color: rgb(110, 231, 183); font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-              <span style="font-size: 1.25rem;">✅</span> Depois (nexMulter)
+              <span style="font-size: 1.25rem;">✅</span> Depois (multerless)
             </div>
-            <pre style="overflow-x: auto;"><code style="color: rgb(203, 213, 225); font-family: 'Courier New', monospace;"><span style="color: rgb(167, 139, 250);">import</span> multer <span style="color: rgb(167, 139, 250);">from</span> <span style="color: rgb(52, 211, 153);">'@purecore/nexMulter'</span>;
+            <pre style="overflow-x: auto;"><code style="color: rgb(203, 213, 225); font-family: 'Courier New', monospace;"><span style="color: rgb(167, 139, 250);">import</span> multer <span style="color: rgb(167, 139, 250);">from</span> <span style="color: rgb(52, 211, 153);">'@purecore/multerless'</span>;
 
 <span style="color: rgb(167, 139, 250);">const</span> upload = <span style="color: rgb(34, 211, 238);">multer</span>({ dest: <span style="color: rgb(52, 211, 153);">'uploads/'</span> });</code></pre>
           </div>
@@ -216,9 +216,9 @@ app.innerHTML = `
         <div style="background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(24px); border: 2px solid rgba(52, 211, 153, 0.5); border-radius: 1rem; padding: 2rem; text-align: center;">
           <div style="font-size: 0.875rem; font-weight: 600; color: rgb(110, 231, 183); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Instale Agora</div>
           <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <code style="font-size: 1.25rem; color: rgb(167, 139, 250); font-family: 'Courier New', monospace; background: rgba(0, 0, 0, 0.3); padding: 1rem 1.5rem; border-radius: 0.5rem;">npm install @purecore/nexMulter</code>
+            <code style="font-size: 1.25rem; color: rgb(167, 139, 250); font-family: 'Courier New', monospace; background: rgba(0, 0, 0, 0.3); padding: 1rem 1.5rem; border-radius: 0.5rem;">npm install @purecore/multerless</code>
             <button 
-              onclick="navigator.clipboard.writeText('npm install @purecore/nexMulter'); this.textContent='✅ Copiado!'; setTimeout(() => this.textContent='📋 Copiar', 2000)"
+              onclick="navigator.clipboard.writeText('npm install @purecore/multerless'); this.textContent='✅ Copiado!'; setTimeout(() => this.textContent='📋 Copiar', 2000)"
               style="padding: 1rem 2rem; background: linear-gradient(to right, rgb(52, 211, 153), rgb(16, 185, 129)); border: none; border-radius: 0.75rem; font-weight: 700; cursor: pointer; color: rgb(15, 23, 42); transition: all 0.3s;"
               onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 25px -5px rgba(52, 211, 153, 0.5)'"
               onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'"
@@ -258,7 +258,7 @@ app.innerHTML = `
           
           <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
             <a 
-              href="https://github.com/suissa/nexMulter" 
+              href="https://github.com/suissa/multerless" 
               target="_blank"
               style="padding: 1rem 2rem; background: linear-gradient(to right, rgb(52, 211, 153), rgb(16, 185, 129)); border-radius: 0.75rem; font-weight: 700; text-decoration: none; color: rgb(15, 23, 42); transition: all 0.3s; display: inline-block;"
               onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 25px -5px rgba(52, 211, 153, 0.5)'"
@@ -267,7 +267,7 @@ app.innerHTML = `
               ⭐ GitHub
             </a>
             <a 
-              href="https://npmjs.com/package/@purecore/nexMulter" 
+              href="https://npmjs.com/package/@purecore/multerless" 
               target="_blank"
               style="padding: 1rem 2rem; background: rgba(52, 211, 153, 0.1); border: 2px solid rgb(52, 211, 153); border-radius: 0.75rem; font-weight: 700; text-decoration: none; color: rgb(110, 231, 183); transition: all 0.3s; display: inline-block;"
               onmouseover="this.style.background='rgba(52, 211, 153, 0.2)'"
@@ -293,7 +293,7 @@ app.innerHTML = `
       <!-- Footer -->
       <footer style="margin-top: 6rem; padding-top: 3rem; border-top: 1px solid rgba(71, 85, 105, 0.3); text-align: center;">
         <div style="margin-bottom: 1.5rem;">
-          <img src="https://i.imgur.com/4w12Her.png" alt="nexMulter" style="width: 100%; max-width: 600px; height: auto; margin: 0 auto; filter: drop-shadow(0 0 20px rgba(52, 211, 153, 0.3));" />
+          <img src="https://i.imgur.com/4w12Her.png" alt="multerless" style="width: 100%; max-width: 600px; height: auto; margin: 0 auto; filter: drop-shadow(0 0 20px rgba(52, 211, 153, 0.3));" />
         </div>
         <p style="color: rgb(148, 163, 184); margin-bottom: 1rem;">
           Parte da iniciativa <strong style="color: rgb(110, 231, 183);">@purecore</strong> — Bibliotecas Node.js seguras e sustentáveis
@@ -301,7 +301,7 @@ app.innerHTML = `
         <p style="color: rgb(100, 116, 139); font-size: 0.875rem;">
           Última atualização: 19 de Janeiro de 2026<br/>
           Status do Multer: 6 meses sem atualização • 69 PRs pendentes • 178 issues abertas<br/>
-          Status do nexMulter: ✅ Ativamente mantido | ✅ 0 PRs pendentes | ✅ 0 vulnerabilidades
+          Status do multerless: ✅ Ativamente mantido | ✅ 0 PRs pendentes | ✅ 0 vulnerabilidades
         </p>
       </footer>
     </article>

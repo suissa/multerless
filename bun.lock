@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "nexmulter",
+      "name": "multerless",
       "dependencies": {
         "accepts": "^2.0.0",
         "body-parser": "^2.2.1",

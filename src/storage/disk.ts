@@ -18,7 +18,7 @@ export class DiskStorage implements StorageEngine {
     this.filename = options.filename || this.defaultFilename;
   }
 
-  private defaultFilename(req: Request, file: File, callback: (error: Error | null, filename: string) => void): void {
+  private defaultFilename(_req: Request, file: File, callback: (error: Error | null, filename: string) => void): void {
     const uniqueName = `${Date.now()}-${randomUUID()}-${file.originalname}`;
     callback(null, uniqueName);
   }
@@ -43,16 +43,20 @@ export class DiskStorage implements StorageEngine {
               size += chunk.length;
             });
 
+            // Listen for finish event to ensure all data is processed
+            file.stream.on('end', () => {
+              callback(undefined, {
+                destination,
+                filename,
+                path: filepath,
+                size
+              });
+            });
+
+            file.stream.on('error', callback);
+
             // Pipeline to save file
             pipeline(file.stream, writeStream)
-              .then(() => {
-                callback(undefined, {
-                  destination,
-                  filename,
-                  path: filepath,
-                  size
-                });
-              })
               .catch(callback);
           })
           .catch(callback);
@@ -60,7 +64,7 @@ export class DiskStorage implements StorageEngine {
     });
   }
 
-  _removeFile(req: Request, file: File, callback: (error?: any) => void): void {
+  _removeFile(_req: Request, file: File, callback: (error?: any) => void): void {
     if (!file.path) {
       return callback(new Error('File path not found'));
     }

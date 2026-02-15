@@ -44,7 +44,7 @@ export function detectFramework(req: any): FrameworkDetectionResult {
  * Cria uma instância de Multer configurada para o framework especificado
  */
 export function createMulterForFramework(
-  framework: SupportedFramework, // eslint-disable-line @typescript-eslint/no-unused-vars
+  _framework: SupportedFramework,
   options: Options = {},
 ): Multer {
   // Por enquanto, retorna a instância padrão do Multer

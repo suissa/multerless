@@ -1,5 +1,5 @@
 project:
-  name: nexmulter
+  name: multerless
   class: critical
   surface: multipart/form-data
 

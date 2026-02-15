@@ -12,7 +12,7 @@ import type {
   RequestHandler, 
   Options, 
   File, 
-  Field, 
+  Field,
   FieldSpec,
   StorageEngine 
 } from './types.js';
@@ -25,10 +25,16 @@ export class Multer {
   constructor(options: Options = {}) {
     this.options = options;
     this.storage = options.storage || new DiskStorage({ destination: options.dest || './uploads' });
-    this.parser = new NativeMultipartParser({
-      limits: options.limits,
-      preserveAsyncContext: true
-    });
+    if (options.limits) {
+      this.parser = new NativeMultipartParser({
+        limits: options.limits,
+        preserveAsyncContext: true
+      });
+    } else {
+      this.parser = new NativeMultipartParser({
+        preserveAsyncContext: true
+      });
+    }
   }
 
   /**
@@ -67,7 +73,7 @@ export class Multer {
   }
 
   private createMiddleware(type: string, fieldname?: string | FieldSpec[], maxCount?: number): RequestHandler {
-    return async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    return async (req: Request, _res: Response, next: NextFunction): Promise<void> => {
       try {
         const { fields, files } = await this.parser.parse(req);
 
@@ -81,7 +87,7 @@ export class Multer {
         const processedFiles = await this.processFiles(files, type, fieldname, maxCount);
         
         // Set req.file and req.files based on Multer conventions
-        this.setRequestFiles(req, processedFiles, type, fieldname);
+        this.setRequestFiles(req, processedFiles, fields, type, fieldname);
 
         next();
       } catch (error) {
@@ -125,7 +131,7 @@ export class Multer {
         this.storage._handleFile({} as Request, fileInfo, (error, info) => {
           if (error) return reject(error);
 
-          const file: File = {
+          const file = {
             fieldname: fileInfo.fieldname,
             originalname: fileInfo.originalname,
             encoding: fileInfo.encoding,
@@ -140,8 +146,18 @@ export class Multer {
             bucket: info?.bucket,
             key: info?.key
           };
+          
+          // Copy any additional properties from the storage engine result
+          if (info) {
+            // Only copy properties that are not already defined
+            for (const [key, value] of Object.entries(info)) {
+              if (!(key in file)) {
+                (file as any)[key] = value;
+              }
+            }
+          }
 
-          resolve(file);
+          resolve(file as File);
         });
       });
 
@@ -199,10 +215,10 @@ export class Multer {
     }
   }
 
-  private setRequestFiles(req: Request, files: File[], type: string, fieldname?: string | FieldSpec[]): void {
+  private setRequestFiles(req: Request, files: File[], fields: Field[], type: string, fieldname?: string | FieldSpec[]): void {
     switch (type) {
       case 'single':
-        req.file = files[0] || undefined;
+        if (files[0]) req.file = files[0];
         break;
 
       case 'array':
@@ -211,13 +227,51 @@ export class Multer {
 
       case 'fields':
         if (Array.isArray(fieldname)) {
-          const filesByField: { [fieldname: string]: File[] } = {};
+          const filesByField: { [fieldname: string]: File[] | any } = {};
+          
+          // First, group files by field name
           for (const file of files) {
-            if (!filesByField[file.fieldname]) {
-              filesByField[file.fieldname] = [];
+            if (file.fieldname) {
+              if (!filesByField[file.fieldname]) {
+                filesByField[file.fieldname] = [];
+              }
+              filesByField[file.fieldname]!.push(file);
             }
-            filesByField[file.fieldname].push(file);
           }
+          
+          // Process each field specification to ensure all fields are represented
+          for (const fieldSpec of fieldname) {
+            const fieldName = fieldSpec.name;
+            
+            // Check if there are files for this field
+            if (!filesByField[fieldName]) {
+              // Look for text fields in parsed fields
+              const textField = fields.find(f => f.name === fieldName);
+              if (textField) {
+                // Create a virtual file-like object for text fields
+                filesByField[fieldName] = [{
+                  fieldname: textField.name,
+                  originalname: textField.name,
+                  encoding: '7bit',
+                  mimetype: 'text/plain',
+                  size: Buffer.byteLength(textField.value, 'utf8'),
+                  destination: undefined,
+                  filename: undefined,
+                  path: undefined,
+                  buffer: Buffer.from(textField.value)
+                }];
+              } else {
+                // Initialize empty array if no files or text fields found
+                filesByField[fieldName] = [];
+              }
+            }
+            
+            // Apply maxCount if specified
+            if (fieldSpec.maxCount && Array.isArray(filesByField[fieldName])) {
+              filesByField[fieldName] = filesByField[fieldName].slice(0, fieldSpec.maxCount);
+            }
+          }
+          
           req.files = filesByField;
         }
         break;

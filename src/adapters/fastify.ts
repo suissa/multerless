@@ -1,7 +1,7 @@
 // @ts-nocheck - Fastify types são peer dependencies opcionais
 /**
  * Adapter para Fastify
- * Converte entre FastifyRequest/FastifyReply e a interface esperada pelo nexmulter
+ * Converte entre FastifyRequest/FastifyReply e a interface esperada pelo multerless
  */
 
 import type {

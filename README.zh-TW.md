@@ -1,13 +1,13 @@
-[![NexMulter](https://i.imgur.com/YMs9vz2.png)](https://i.imgur.com/YMs9vz2.png)
-[![npm version](https://badge.fury.io/js/%40purecore%2Fnexmulter.svg)](https://badge.fury.io/js/%40purecore%2Fnexmulter)
+[![multerless](https://i.imgur.com/YMs9vz2.png)](https://i.imgur.com/YMs9vz2.png)
+[![npm version](https://badge.fury.io/js/%40purecore%2Fmulterless.svg)](https://badge.fury.io/js/%40purecore%2Fmulterless)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/@purecore/nexmulter.svg)](https://nodejs.org/)
+[![Node.js Version](https://img.shields.io/node/v/@purecore/multerless.svg)](https://nodejs.org/)
 
 [English](README.md) | [Português](README.pt.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Italiano](README.it.md) | [Русский](README.ru.md) | [中文 (简体)](README.zh-CN.md) | [中文 (繁體)](README.zh-TW.md) | [日本語](README.ja.md)
 
 **Node.js 原生 multipart/form-data 解析器 - Multer 的直接替代品 ("Drop-in replacement")，效能更優，零依賴**
 
-## 🚀 為什麼選擇 nexMulter？
+## 🚀 為什麼選擇 multerless？
 
 - **🏆 100% 相容 Multer** - 直接替代，API 完全相同。
 - **⚡ 快 30-50%** - 基於 Node.js 原生實作，無外部依賴。
@@ -18,7 +18,7 @@
 
 ## 📊 效能對比
 
-| 指標           | Multer    | @purecore/nexmulter | 改進          |
+| 指標           | Multer    | @purecore/multerless | 改進          |
 | -------------- | --------- | ------------------- | ------------- |
 | **上傳速度**   | 1.2s      | 0.8s                | **快 33%**    |
 | **記憶體佔用** | 250MB     | 180MB               | **少 28%**    |
@@ -28,7 +28,7 @@
 ## 📦 安裝
 
 ```bash
-npm install @purecore/nexmulter
+npm install @purecore/multerless
 ```
 
 ## 🎯 快速開始
@@ -37,7 +37,7 @@ npm install @purecore/nexmulter
 
 ```javascript
 const express = require("express");
-const multer = require("@purecore/nexmulter");
+const multer = require("@purecore/multerless");
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
@@ -125,13 +125,13 @@ const upload = multer({
 
 ## 🌐 多框架支援
 
-nexMulter 現已原生支援 **Fastify**、**NestJS** 和 **Bun**！
+multerless 現已原生支援 **Fastify**、**NestJS** 和 **Bun**！
 
 ### Fastify
 
 ```javascript
 import Fastify from "fastify";
-import { createFastifyMulter } from "@purecore/nexmulter";
+import { createFastifyMulter } from "@purecore/multerless";
 
 const fastify = Fastify();
 const upload = createFastifyMulter({ dest: "uploads/" });
@@ -154,7 +154,7 @@ fastify.listen({ port: 3000 });
 
 ```typescript
 import { Controller, Post, UseInterceptors } from "@nestjs/common";
-import { FileInterceptor, UploadedFile } from "@purecore/nexmulter";
+import { FileInterceptor, UploadedFile } from "@purecore/multerless";
 
 @Controller("upload")
 export class UploadController {
@@ -170,7 +170,7 @@ export class UploadController {
 
 ```typescript
 import { Elysia } from "elysia";
-import { createBunMulter } from "@purecore/nexmulter";
+import { createBunMulter } from "@purecore/multerless";
 
 const app = new Elysia();
 const upload = createBunMulter({ dest: "uploads/" });
@@ -186,7 +186,7 @@ app.listen(3000);
 ### 框架檢測
 
 ```javascript
-import { createMulterForFramework, detectFramework } from "@purecore/nexmulter";
+import { createMulterForFramework, detectFramework } from "@purecore/multerless";
 
 // 自動檢測框架
 const detection = detectFramework(req);
@@ -294,8 +294,8 @@ npm run benchmark
 
 ### 從 Multer 遷移
 
-1. **安裝**: `npm install @purecore/nexmulter`
-2. **替換引入**: 將 `require('multer')` 改為 `require('@purecore/nexmulter')`
+1. **安裝**: `npm install @purecore/multerless`
+2. **替換引入**: 將 `require('multer')` 改為 `require('@purecore/multerless')`
 3. **完成！** - 無需其他更改
 
 ### 破壞性變更 (Breaking Changes)
@@ -317,8 +317,8 @@ npm run benchmark
 ### 開發設置
 
 ```bash
-git clone https://github.com/purecore/nexmulter.git
-cd nexmulter
+git clone https://github.com/purecore/multerless.git
+cd multerless
 npm install
 npm run dev
 ```
@@ -335,9 +335,9 @@ MIT 授權 - 詳情請參閱 [LICENSE](LICENSE) 檔案。
 
 ## 📞 支援
 
-- 📖 [文件](https://github.com/purecore/nexmulter/wiki)
-- 🐛 [問題追蹤](https://github.com/purecore/nexmulter/issues)
-- 💬 [討論](https://github.com/purecore/nexmulter/discussions)
+- 📖 [文件](https://github.com/purecore/multerless/wiki)
+- 🐛 [問題追蹤](https://github.com/purecore/multerless/issues)
+- 💬 [討論](https://github.com/purecore/multerless/discussions)
 
 ---
 

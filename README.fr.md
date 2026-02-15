@@ -1,13 +1,13 @@
-[![NexMulter](https://i.imgur.com/YMs9vz2.png)](https://i.imgur.com/YMs9vz2.png)
-[![npm version](https://badge.fury.io/js/%40purecore%2Fnexmulter.svg)](https://badge.fury.io/js/%40purecore%2Fnexmulter)
+[![multerless](https://i.imgur.com/YMs9vz2.png)](https://i.imgur.com/YMs9vz2.png)
+[![npm version](https://badge.fury.io/js/%40purecore%2Fmulterless.svg)](https://badge.fury.io/js/%40purecore%2Fmulterless)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/@purecore/nexmulter.svg)](https://nodejs.org/)
+[![Node.js Version](https://img.shields.io/node/v/@purecore/multerless.svg)](https://nodejs.org/)
 
 [English](README.md) | [Português](README.pt.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Italiano](README.it.md) | [Русский](README.ru.md) | [中文 (简体)](README.zh-CN.md) | [中文 (繁體)](README.zh-TW.md) | [日本語](README.ja.md)
 
 **Parseur multipart/form-data natif pour Node.js - Remplacement direct ("Drop-in replacement") pour Multer avec des performances supérieures et zéro dépendance**
 
-## 🚀 Pourquoi choisir nexMulter ?
+## 🚀 Pourquoi choisir multerless ?
 
 - **🏆 100% Compatible avec Multer** - Remplacement direct avec une API identique.
 - **⚡ 30-50% Plus Rapide** - Implémentation native Node.js sans dépendances externes.
@@ -18,7 +18,7 @@
 
 ## 📊 Comparaison des Performances
 
-| Métrique                | Multer     | @purecore/nexmulter | Amélioration          |
+| Métrique                | Multer     | @purecore/multerless | Amélioration          |
 | ----------------------- | ---------- | ------------------- | --------------------- |
 | **Vitesse d'Upload**    | 1.2s       | 0.8s                | **33% plus rapide**   |
 | **Utilisation Mémoire** | 250MB      | 180MB               | **28% moins**         |
@@ -28,7 +28,7 @@
 ## 📦 Installation
 
 ```bash
-npm install @purecore/nexmulter
+npm install @purecore/multerless
 ```
 
 ## 🎯 Démarrage Rapide
@@ -37,7 +37,7 @@ npm install @purecore/nexmulter
 
 ```javascript
 const express = require("express");
-const multer = require("@purecore/nexmulter");
+const multer = require("@purecore/multerless");
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
@@ -125,13 +125,13 @@ const upload = multer({
 
 ## 🌐 Support Multi-Framework
 
-nexMulter supporte maintenant **Fastify**, **NestJS** et **Bun** nativement !
+multerless supporte maintenant **Fastify**, **NestJS** et **Bun** nativement !
 
 ### Fastify
 
 ```javascript
 import Fastify from "fastify";
-import { createFastifyMulter } from "@purecore/nexmulter";
+import { createFastifyMulter } from "@purecore/multerless";
 
 const fastify = Fastify();
 const upload = createFastifyMulter({ dest: "uploads/" });
@@ -154,7 +154,7 @@ fastify.listen({ port: 3000 });
 
 ```typescript
 import { Controller, Post, UseInterceptors } from "@nestjs/common";
-import { FileInterceptor, UploadedFile } from "@purecore/nexmulter";
+import { FileInterceptor, UploadedFile } from "@purecore/multerless";
 
 @Controller("upload")
 export class UploadController {
@@ -170,7 +170,7 @@ export class UploadController {
 
 ```typescript
 import { Elysia } from "elysia";
-import { createBunMulter } from "@purecore/nexmulter";
+import { createBunMulter } from "@purecore/multerless";
 
 const app = new Elysia();
 const upload = createBunMulter({ dest: "uploads/" });
@@ -186,7 +186,7 @@ app.listen(3000);
 ### Détection de Framework
 
 ```javascript
-import { createMulterForFramework, detectFramework } from "@purecore/nexmulter";
+import { createMulterForFramework, detectFramework } from "@purecore/multerless";
 
 // Détection automatique du framework
 const detection = detectFramework(req);
@@ -294,8 +294,8 @@ npm run benchmark
 
 ### Depuis Multer
 
-1. **Installer** : `npm install @purecore/nexmulter`
-2. **Remplacer import** : Changez `require('multer')` par `require('@purecore/nexmulter')`
+1. **Installer** : `npm install @purecore/multerless`
+2. **Remplacer import** : Changez `require('multer')` par `require('@purecore/multerless')`
 3. **Fini !** - Aucun autre changement nécessaire
 
 ### Changements Majeurs (Breaking Changes)
@@ -317,8 +317,8 @@ Les contributions sont les bienvenues ! Voir notre [Guide de Contribution](CONTR
 ### Configuration de Développement
 
 ```bash
-git clone https://github.com/purecore/nexmulter.git
-cd nexmulter
+git clone https://github.com/purecore/multerless.git
+cd multerless
 npm install
 npm run dev
 ```
@@ -335,9 +335,9 @@ Licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ## 📞 Support
 
-- 📖 [Documentation](https://github.com/purecore/nexmulter/wiki)
-- 🐛 [Suivi des Problèmes](https://github.com/purecore/nexmulter/issues)
-- 💬 [Discussions](https://github.com/purecore/nexmulter/discussions)
+- 📖 [Documentation](https://github.com/purecore/multerless/wiki)
+- 🐛 [Suivi des Problèmes](https://github.com/purecore/multerless/issues)
+- 💬 [Discussions](https://github.com/purecore/multerless/discussions)
 
 ---
 

@@ -6,7 +6,7 @@ import { IncomingMessage } from "node:http";
 import { Readable } from "node:stream";
 import { AsyncResource } from "node:async_hooks";
 import { MulterError } from "./errors.js";
-import type { Request, File, Field, Limits, FileInfo } from "./types.js";
+import type { Limits, FileInfo, Field } from "./types.js";
 
 export interface ParserOptions {
   limits?: Limits;
@@ -82,7 +82,10 @@ export class NativeMultipartParser {
 
   private extractBoundary(contentType: string): string | null {
     const match = contentType.match(/boundary=(.+)$/);
-    return match ? match[1].replace(/"/g, "") : null;
+    if (match && match[1]) {
+      return match[1].replace(/"/g, "");
+    }
+    return null;
   }
 
   private parseMultipartBuffer(
@@ -119,11 +122,16 @@ export class NativeMultipartParser {
         throw new MulterError("MISSING_FIELD_NAME");
       }
 
-      const fieldName = nameMatch[1];
+      let fieldName = nameMatch[1];
+      if (!fieldName) throw new MulterError("MISSING_FIELD_NAME");
 
       if (fieldName.length > this.limits.fieldNameSize) {
         throw new MulterError("LIMIT_FIELD_KEY", fieldName);
       }
+
+      // Normalize field names that might be nested (e.g., user[profile][avatar])
+      // For now, we'll keep the original field name but in the future we might want to parse nested structures
+      fieldName = fieldName.trim();
 
       if (filenameMatch) {
         // It's a file
@@ -142,13 +150,15 @@ export class NativeMultipartParser {
 
         const stream = Readable.from(body);
 
-        files.push({
-          fieldname: fieldName,
-          originalname: filename,
-          encoding: "7bit",
-          mimetype: contentType,
-          stream,
-        });
+        if (fieldName && filename) {
+          files.push({
+            fieldname: fieldName,
+            originalname: filename,
+            encoding: "7bit",
+            mimetype: contentType,
+            stream,
+          });
+        }
       } else {
         // It's a text field
         fieldCount++;
@@ -160,10 +170,19 @@ export class NativeMultipartParser {
           throw new MulterError("LIMIT_FIELD_VALUE", fieldName);
         }
 
-        fields.push({
-          name: fieldName,
-          value: body.toString("utf8"),
-        });
+        if (fieldName) {
+          // Remove trailing CRLF characters from field value
+          let fieldValue = body.toString("utf8");
+          // More comprehensive removal of leading and trailing whitespace including \r\n
+          fieldValue = fieldValue.replace(/^[\s\r\n]+|[\s\r\n]+$/g, '');
+          
+          // For nested field names like 'user[profile][avatar]', we need to process them specially
+          // However, for now we'll just add them as-is to the fields array
+          fields.push({
+            name: fieldName,
+            value: fieldValue,
+          });
+        }
       }
     }
 
@@ -200,7 +219,13 @@ export class NativeMultipartParser {
     }
 
     const headerSection = part.subarray(0, headerEndIndex).toString("utf8");
-    const body = part.subarray(headerEndIndex + 4);
+    let body = part.subarray(headerEndIndex + 4);
+
+    // Remove potential trailing CRLF that might be part of multipart formatting
+    // but not part of the actual file content
+    if (body.length >= 2 && body.slice(-2).equals(Buffer.from('\r\n'))) {
+      body = body.slice(0, -2);
+    }
 
     const headers: Record<string, string> = {};
     const headerLines = headerSection.split("\r\n");

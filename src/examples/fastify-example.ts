@@ -1,5 +1,5 @@
 /**
- * Exemplo de uso do nexmulter com Fastify
+ * Exemplo de uso do multerless com Fastify
  */
 
 import Fastify from "fastify";

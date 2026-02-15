@@ -11,7 +11,7 @@ export class MulterError extends Error {
     super();
     this.name = 'MulterError';
     this.code = code;
-    this.field = field;
+    if (field !== undefined) this.field = field;
 
     // Set appropriate error messages
     switch (code) {

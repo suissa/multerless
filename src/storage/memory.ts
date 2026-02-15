@@ -5,11 +5,11 @@
 import type { StorageEngine, Request, File, FileInfo, MemoryStorageOptions } from '../types.js';
 
 export class MemoryStorage implements StorageEngine {
-  constructor(options: MemoryStorageOptions = {}) {
+  constructor(_options: MemoryStorageOptions = {}) {
     // Memory storage doesn't need specific options
   }
 
-  _handleFile(req: Request, file: FileInfo, callback: (error?: any, info?: Partial<File>) => void): void {
+  _handleFile(_req: Request, file: FileInfo, callback: (error?: any, info?: Partial<File>) => void): void {
     const chunks: Buffer[] = [];
     let size = 0;
 
