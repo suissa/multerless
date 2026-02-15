@@ -152,7 +152,7 @@ const upload = multer({ dest: "uploads/" });
 ### Depois:
 
 ```javascript
-import multer from "@purecore/multerless";
+import multer from "multerless";
 
 const upload = multer({ dest: "uploads/" });
 ```
@@ -257,7 +257,7 @@ O processo do multerless pode (e deve) ser **replicado**:
 npm uninstall multer
 
 # Instalar multerless
-npm install @purecore/multerless
+npm install multerless
 
 # Ajustar imports
 # sed -i "s/from 'multer'/from '@purecore\/multerless'/g" **/*.{js,ts}
@@ -288,10 +288,10 @@ O multerless é **canônico** - nunca mudará. Mas e se você precisar de featur
 ### Abordagem Modular
 
 ```
-@purecore/multerless          ← Canônico (1.0.0 forever)
-@purecore/multerless-cloud    ← Extensão para storage cloud
-@purecore/multerless-compress ← Extensão para compressão
-@purecore/multerless-video    ← Extensão para processamento de vídeo
+multerless          ← Canônico (1.0.0 forever)
+multerless-cloud    ← Extensão para storage cloud
+multerless-compress ← Extensão para compressão
+multerless-video    ← Extensão para processamento de vídeo
 ```
 
 Cada extensão:
@@ -347,7 +347,7 @@ O multerless não é apenas uma alternativa técnica. É uma **declaração de p
 ## Recursos
 
 - **Repositório**: [github.com/suissa/multerless](https://github.com/suissa/multerless)
-- **NPM**: `npm install @purecore/multerless`
+- **NPM**: `npm install multerless`
 - **Documentação**: [docs.purecore.dev/multerless](https://docs.purecore.dev/multerless)
 - **Roadmap Público**: [github.com/suissa/multerless/projects/1](https://github.com/suissa/multerless/projects/1)
 - **Security Policy**: [SECURITY.md](./SECURITY.md)
@@ -368,7 +368,7 @@ Este projeto é parte da iniciativa **@purecore** - um conjunto de bibliotecas N
 
 - `@purecore/apify` - Roteamento HTTP (interface Express-like)
 - `@purecore/reqify` - Cliente HTTP (interface Axios-like)
-- `@purecore/multerless` - Upload de arquivos (interface Multer-like)
+- `multerless` - Upload de arquivos (interface Multer-like)
 
 ---
 

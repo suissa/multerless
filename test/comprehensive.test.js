@@ -1,5 +1,5 @@
 /**
- * Comprehensive tests for @purecore/multerless
+ * Comprehensive tests for multerless
  * Testing the core functionality that matters most
  */
 
@@ -12,7 +12,7 @@ import { mkdirSync, rmdirSync, existsSync, unlinkSync } from "node:fs";
 import multer from "../dist/index.js";
 import { MulterError } from "../dist/errors.js";
 
-describe("@purecore/multerless - Comprehensive Tests", () => {
+describe("multerless - Comprehensive Tests", () => {
   const createMockRequest = (formDataBuffer, contentType) => {
     const stream = Readable.from(formDataBuffer);
     stream.headers = {

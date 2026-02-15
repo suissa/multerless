@@ -1,7 +1,7 @@
 [![multerless](https://i.imgur.com/YMs9vz2.png)](https://i.imgur.com/YMs9vz2.png)
 [![npm version](https://badge.fury.io/js/%40purecore%2Fmulterless.svg)](https://badge.fury.io/js/%40purecore%2Fmulterless)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/@purecore/multerless.svg)](https://nodejs.org/)
+[![Node.js Version](https://img.shields.io/node/v/multerless.svg)](https://nodejs.org/)
 
 [English](README.md) | [Português](README.pt.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Italiano](README.it.md) | [Русский](README.ru.md) | [中文 (简体)](README.zh-CN.md) | [中文 (繁體)](README.zh-TW.md) | [日本語](README.ja.md)
 
@@ -18,7 +18,7 @@
 
 ## 📊 パフォーマンス比較
 
-| 指標                 | Multer        | @purecore/multerless | 改善率        |
+| 指標                 | Multer        | multerless | 改善率        |
 | -------------------- | ------------- | ------------------- | ------------- |
 | **アップロード速度** | 1.2s          | 0.8s                | **33% 高速**  |
 | **メモリ使用量**     | 250MB         | 180MB               | **28% 削減**  |
@@ -28,7 +28,7 @@
 ## 📦 インストール
 
 ```bash
-npm install @purecore/multerless
+npm install multerless
 ```
 
 ## 🎯 クイックスタート
@@ -37,7 +37,7 @@ npm install @purecore/multerless
 
 ```javascript
 const express = require("express");
-const multer = require("@purecore/multerless");
+const multer = require("multerless");
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
@@ -133,7 +133,7 @@ multerlessは、**Fastify**、**NestJS**、**Bun** をネイティブにサポ�
 
 ```javascript
 import Fastify from "fastify";
-import { createFastifyMulter } from "@purecore/multerless";
+import { createFastifyMulter } from "multerless";
 
 const fastify = Fastify();
 const upload = createFastifyMulter({ dest: "uploads/" });
@@ -156,7 +156,7 @@ fastify.listen({ port: 3000 });
 
 ```typescript
 import { Controller, Post, UseInterceptors } from "@nestjs/common";
-import { FileInterceptor, UploadedFile } from "@purecore/multerless";
+import { FileInterceptor, UploadedFile } from "multerless";
 
 @Controller("upload")
 export class UploadController {
@@ -172,7 +172,7 @@ export class UploadController {
 
 ```typescript
 import { Elysia } from "elysia";
-import { createBunMulter } from "@purecore/multerless";
+import { createBunMulter } from "multerless";
 
 const app = new Elysia();
 const upload = createBunMulter({ dest: "uploads/" });
@@ -188,7 +188,7 @@ app.listen(3000);
 ### フレームワーク検出
 
 ```javascript
-import { createMulterForFramework, detectFramework } from "@purecore/multerless";
+import { createMulterForFramework, detectFramework } from "multerless";
 
 // フレームワーク自動検出
 const detection = detectFramework(req);
@@ -296,8 +296,8 @@ npm run benchmark
 
 ### Multer から
 
-1. **インストール**: `npm install @purecore/multerless`
-2. **インポート置換**: `require('multer')` を `require('@purecore/multerless')` に変更
+1. **インストール**: `npm install multerless`
+2. **インポート置換**: `require('multer')` を `require('multerless')` に変更
 3. **完了！** - 他の変更は必要ありません
 
 ### 破壊的変更 (Breaking Changes)

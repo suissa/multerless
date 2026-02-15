@@ -1,7 +1,7 @@
 [![multerless](https://i.imgur.com/YMs9vz2.png)](https://i.imgur.com/YMs9vz2.png)
 [![npm version](https://badge.fury.io/js/%40purecore%2Fmulterless.svg)](https://badge.fury.io/js/%40purecore%2Fmulterless)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/@purecore/multerless.svg)](https://nodejs.org/)
+[![Node.js Version](https://img.shields.io/node/v/multerless.svg)](https://nodejs.org/)
 
 [English](README.md) | [Português](README.pt.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Italiano](README.it.md) | [Русский](README.ru.md) | [中文 (简体)](README.zh-CN.md) | [中文 (繁體)](README.zh-TW.md) | [日本語](README.ja.md)
 
@@ -18,7 +18,7 @@
 
 ## 📊 Comparaison des Performances
 
-| Métrique                | Multer     | @purecore/multerless | Amélioration          |
+| Métrique                | Multer     | multerless | Amélioration          |
 | ----------------------- | ---------- | ------------------- | --------------------- |
 | **Vitesse d'Upload**    | 1.2s       | 0.8s                | **33% plus rapide**   |
 | **Utilisation Mémoire** | 250MB      | 180MB               | **28% moins**         |
@@ -28,7 +28,7 @@
 ## 📦 Installation
 
 ```bash
-npm install @purecore/multerless
+npm install multerless
 ```
 
 ## 🎯 Démarrage Rapide
@@ -37,7 +37,7 @@ npm install @purecore/multerless
 
 ```javascript
 const express = require("express");
-const multer = require("@purecore/multerless");
+const multer = require("multerless");
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
@@ -131,7 +131,7 @@ multerless supporte maintenant **Fastify**, **NestJS** et **Bun** nativement !
 
 ```javascript
 import Fastify from "fastify";
-import { createFastifyMulter } from "@purecore/multerless";
+import { createFastifyMulter } from "multerless";
 
 const fastify = Fastify();
 const upload = createFastifyMulter({ dest: "uploads/" });
@@ -154,7 +154,7 @@ fastify.listen({ port: 3000 });
 
 ```typescript
 import { Controller, Post, UseInterceptors } from "@nestjs/common";
-import { FileInterceptor, UploadedFile } from "@purecore/multerless";
+import { FileInterceptor, UploadedFile } from "multerless";
 
 @Controller("upload")
 export class UploadController {
@@ -170,7 +170,7 @@ export class UploadController {
 
 ```typescript
 import { Elysia } from "elysia";
-import { createBunMulter } from "@purecore/multerless";
+import { createBunMulter } from "multerless";
 
 const app = new Elysia();
 const upload = createBunMulter({ dest: "uploads/" });
@@ -186,7 +186,7 @@ app.listen(3000);
 ### Détection de Framework
 
 ```javascript
-import { createMulterForFramework, detectFramework } from "@purecore/multerless";
+import { createMulterForFramework, detectFramework } from "multerless";
 
 // Détection automatique du framework
 const detection = detectFramework(req);
@@ -294,8 +294,8 @@ npm run benchmark
 
 ### Depuis Multer
 
-1. **Installer** : `npm install @purecore/multerless`
-2. **Remplacer import** : Changez `require('multer')` par `require('@purecore/multerless')`
+1. **Installer** : `npm install multerless`
+2. **Remplacer import** : Changez `require('multer')` par `require('multerless')`
 3. **Fini !** - Aucun autre changement nécessaire
 
 ### Changements Majeurs (Breaking Changes)

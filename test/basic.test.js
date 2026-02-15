@@ -1,12 +1,12 @@
 /**
- * Basic tests for @purecore/multerless
+ * Basic tests for multerless
  */
 
 import { describe, it } from "node:test";
 import { strictEqual, ok, throws } from "node:assert";
 import multer from "../dist/index.js";
 
-describe("@purecore/multerless", () => {
+describe("multerless", () => {
   it("should create multer instance", () => {
     const upload = multer();
     ok(upload);

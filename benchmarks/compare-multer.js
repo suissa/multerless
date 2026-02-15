@@ -1,5 +1,5 @@
 /**
- * Benchmark comparing @purecore/multerless with original multer
+ * Benchmark comparing multerless with original multer
  */
 
 import { performance } from "node:perf_hooks";
@@ -39,7 +39,7 @@ function benchmark(name, fn, iterations = 10000) {
   return { duration, opsPerSecond };
 }
 
-console.log("📊 @purecore/multerless vs Multer Benchmark");
+console.log("📊 multerless vs Multer Benchmark");
 console.log("================================================");
 
 // Benchmark instance creation

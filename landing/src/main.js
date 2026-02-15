@@ -199,7 +199,7 @@ app.innerHTML = `
             <div style="color: rgb(110, 231, 183); font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
               <span style="font-size: 1.25rem;">✅</span> Depois (multerless)
             </div>
-            <pre style="overflow-x: auto;"><code style="color: rgb(203, 213, 225); font-family: 'Courier New', monospace;"><span style="color: rgb(167, 139, 250);">import</span> multer <span style="color: rgb(167, 139, 250);">from</span> <span style="color: rgb(52, 211, 153);">'@purecore/multerless'</span>;
+            <pre style="overflow-x: auto;"><code style="color: rgb(203, 213, 225); font-family: 'Courier New', monospace;"><span style="color: rgb(167, 139, 250);">import</span> multer <span style="color: rgb(167, 139, 250);">from</span> <span style="color: rgb(52, 211, 153);">'multerless'</span>;
 
 <span style="color: rgb(167, 139, 250);">const</span> upload = <span style="color: rgb(34, 211, 238);">multer</span>({ dest: <span style="color: rgb(52, 211, 153);">'uploads/'</span> });</code></pre>
           </div>
@@ -216,9 +216,9 @@ app.innerHTML = `
         <div style="background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(24px); border: 2px solid rgba(52, 211, 153, 0.5); border-radius: 1rem; padding: 2rem; text-align: center;">
           <div style="font-size: 0.875rem; font-weight: 600; color: rgb(110, 231, 183); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">Instale Agora</div>
           <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-            <code style="font-size: 1.25rem; color: rgb(167, 139, 250); font-family: 'Courier New', monospace; background: rgba(0, 0, 0, 0.3); padding: 1rem 1.5rem; border-radius: 0.5rem;">npm install @purecore/multerless</code>
+            <code style="font-size: 1.25rem; color: rgb(167, 139, 250); font-family: 'Courier New', monospace; background: rgba(0, 0, 0, 0.3); padding: 1rem 1.5rem; border-radius: 0.5rem;">npm install multerless</code>
             <button 
-              onclick="navigator.clipboard.writeText('npm install @purecore/multerless'); this.textContent='✅ Copiado!'; setTimeout(() => this.textContent='📋 Copiar', 2000)"
+              onclick="navigator.clipboard.writeText('npm install multerless'); this.textContent='✅ Copiado!'; setTimeout(() => this.textContent='📋 Copiar', 2000)"
               style="padding: 1rem 2rem; background: linear-gradient(to right, rgb(52, 211, 153), rgb(16, 185, 129)); border: none; border-radius: 0.75rem; font-weight: 700; cursor: pointer; color: rgb(15, 23, 42); transition: all 0.3s;"
               onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 25px -5px rgba(52, 211, 153, 0.5)'"
               onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'"
@@ -267,7 +267,7 @@ app.innerHTML = `
               ⭐ GitHub
             </a>
             <a 
-              href="https://npmjs.com/package/@purecore/multerless" 
+              href="https://npmjs.com/package/multerless" 
               target="_blank"
               style="padding: 1rem 2rem; background: rgba(52, 211, 153, 0.1); border: 2px solid rgb(52, 211, 153); border-radius: 0.75rem; font-weight: 700; text-decoration: none; color: rgb(110, 231, 183); transition: all 0.3s; display: inline-block;"
               onmouseover="this.style.background='rgba(52, 211, 153, 0.2)'"

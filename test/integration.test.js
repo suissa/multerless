@@ -1,5 +1,5 @@
 /**
- * Integration tests for @purecore/multerless
+ * Integration tests for multerless
  */
 
 import { describe, it } from "node:test";
@@ -11,7 +11,7 @@ import { join } from "node:path";
 import { mkdirSync, rmdirSync, existsSync, unlinkSync } from "node:fs";
 import multer from "../dist/index.js";
 
-describe("@purecore/multerless - Integration Tests", () => {
+describe("multerless - Integration Tests", () => {
   it("should work with memory storage", (t, done) => {
     // Create simple content
     const content = 'Simple test content';

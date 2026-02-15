@@ -1,5 +1,5 @@
 /**
- * Edge case tests for @purecore/multerless
+ * Edge case tests for multerless
  */
 
 import { describe, it } from "node:test";
@@ -12,7 +12,7 @@ import multer from "../dist/index.js";
 import { MulterError } from "../dist/errors.js";
 import { NativeMultipartParser } from "../dist/parser.js";
 
-describe("@purecore/multerless - Edge Cases", () => {
+describe("multerless - Edge Cases", () => {
   // Helper to create mock request
   const createMockRequest = (formDataBuffer, contentType) => {
     const stream = Readable.from(formDataBuffer);

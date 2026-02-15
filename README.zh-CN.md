@@ -1,7 +1,7 @@
 [![multerless](https://i.imgur.com/YMs9vz2.png)](https://i.imgur.com/YMs9vz2.png)
 [![npm version](https://badge.fury.io/js/%40purecore%2Fmulterless.svg)](https://badge.fury.io/js/%40purecore%2Fmulterless)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/@purecore/multerless.svg)](https://nodejs.org/)
+[![Node.js Version](https://img.shields.io/node/v/multerless.svg)](https://nodejs.org/)
 
 [English](README.md) | [Português](README.pt.md) | [Français](README.fr.md) | [Deutsch](README.de.md) | [Italiano](README.it.md) | [Русский](README.ru.md) | [中文 (简体)](README.zh-CN.md) | [中文 (繁體)](README.zh-TW.md) | [日本語](README.ja.md)
 
@@ -18,7 +18,7 @@
 
 ## 📊 性能对比
 
-| 指标         | Multer  | @purecore/multerless | 改进          |
+| 指标         | Multer  | multerless | 改进          |
 | ------------ | ------- | ------------------- | ------------- |
 | **上传速度** | 1.2s    | 0.8s                | **快 33%**    |
 | **内存占用** | 250MB   | 180MB               | **少 28%**    |
@@ -28,7 +28,7 @@
 ## 📦 安装
 
 ```bash
-npm install @purecore/multerless
+npm install multerless
 ```
 
 ## 🎯 快速开始
@@ -37,7 +37,7 @@ npm install @purecore/multerless
 
 ```javascript
 const express = require("express");
-const multer = require("@purecore/multerless");
+const multer = require("multerless");
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
@@ -131,7 +131,7 @@ multerless 现已原生支持 **Fastify**、**NestJS** 和 **Bun**！
 
 ```javascript
 import Fastify from "fastify";
-import { createFastifyMulter } from "@purecore/multerless";
+import { createFastifyMulter } from "multerless";
 
 const fastify = Fastify();
 const upload = createFastifyMulter({ dest: "uploads/" });
@@ -154,7 +154,7 @@ fastify.listen({ port: 3000 });
 
 ```typescript
 import { Controller, Post, UseInterceptors } from "@nestjs/common";
-import { FileInterceptor, UploadedFile } from "@purecore/multerless";
+import { FileInterceptor, UploadedFile } from "multerless";
 
 @Controller("upload")
 export class UploadController {
@@ -170,7 +170,7 @@ export class UploadController {
 
 ```typescript
 import { Elysia } from "elysia";
-import { createBunMulter } from "@purecore/multerless";
+import { createBunMulter } from "multerless";
 
 const app = new Elysia();
 const upload = createBunMulter({ dest: "uploads/" });
@@ -186,7 +186,7 @@ app.listen(3000);
 ### 框架检测
 
 ```javascript
-import { createMulterForFramework, detectFramework } from "@purecore/multerless";
+import { createMulterForFramework, detectFramework } from "multerless";
 
 // 自动检测框架
 const detection = detectFramework(req);
@@ -294,8 +294,8 @@ npm run benchmark
 
 ### 从 Multer 迁移
 
-1. **安装**: `npm install @purecore/multerless`
-2. **替换引入**: 将 `require('multer')` 改为 `require('@purecore/multerless')`
+1. **安装**: `npm install multerless`
+2. **替换引入**: 将 `require('multer')` 改为 `require('multerless')`
 3. **完成！** - 无需其他更改
 
 ### 破坏性变更 (Breaking Changes)

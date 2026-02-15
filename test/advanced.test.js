@@ -1,5 +1,5 @@
 /**
- * Advanced tests for @purecore/multerless
+ * Advanced tests for multerless
  */
 
 import { describe, it } from "node:test";
@@ -11,7 +11,7 @@ import { join } from "node:path";
 import multer from "../dist/index.js";
 import { MulterError } from "../dist/errors.js";
 
-describe("@purecore/multerless - Advanced Tests", () => {
+describe("multerless - Advanced Tests", () => {
   // Helper to create mock request
   const createMockRequest = (formDataBuffer, contentType) => {
     const stream = Readable.from(formDataBuffer);
